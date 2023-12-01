@@ -1,0 +1,322 @@
+body{
+    background-image: url(images/the-garret.jpeg);
+    background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	text-align: center;
+}
+
+.titulo1{
+    color: #a0814c;
+    background-color: black;
+    border-style: double;
+    border-radius: 10px;
+    height: 37px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.titulo2{
+    color: silver ;
+    background-color: black;
+    border-style: double;
+    height: 31px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.parrafo{
+    padding-bottom: 10px;
+    position: relative;
+    width: 1885px;
+    height: 58px;
+    overflow: hidden;
+}
+
+.parrafo::before{
+    content: '';
+    background: black center/cover no-repeat;
+    filter: blur(49px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.p1{
+    color: white;
+    font-family: cursive;
+    text-align: center;
+}
+
+.p2{
+    color: white;
+    font-family: cursive;
+    text-align: center;
+}
+
+.botones, .primerTitulo, .segundaSeccion, .terceraSeccion, .parrafo{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#botonInformacion{
+    color: white;
+    background-color: black;
+    border-width: thick;
+    width: 215px;
+    height: 100px;
+    border-radius: 9px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-family: cursive;
+    font-size: medium;
+    margin-left: 0px;
+    margin-top: 15px;
+}
+
+#botonJuego{
+    color: white;
+    width: 215px;
+    background-color: black;
+    border-width: thick;
+    border-radius: 9px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: cursive;
+    font-size: medium;
+    margin-left: 31px;
+    margin-top: 15px; 
+}
+
+.guia1, .juegoBebidas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bebidas{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tarjetasBebidas, .tarjetasBebidas2{
+    width: 159px;
+    height: 79px;
+    padding: 10px;
+    color: honeydew;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 3px solid #7d3a08;
+    border-radius: 15px;
+    border-style: double;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.tarjetasBebidas::before{
+     content: '';
+    background: url(./images/bar2.jpeg) center/cover no-repeat;
+    background-size: cover;
+    filter: blur(1.5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.tarjetasBebidas2::before{
+    content: '';
+   background: url(./images/bar2.jpeg) center/cover no-repeat;
+   background-size: cover;
+   filter: blur(1.5px);
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: -1;
+   border-radius: 15px;
+}
+
+.tarjetasBebidas img{
+    width: 65px;
+    height: 65px;
+    padding-left: 5px;
+}
+
+.tarjetasBebidas2 img{
+    width: 65px;
+    height: 65px;
+    padding-left: 5px;
+}
+
+input{
+    display: none;
+}
+
+input:checked + label{
+    background: black;
+    color: white;
+    border: 3px solid silver;
+}
+
+.botonS{
+    padding-top: 25px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info, .juegoBebidas2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.miImagen{
+    width: 200px;
+    height: 200px;
+}
+
+.infoCompleta{
+color: white;
+
+}
+
+.infoCompleta::before{
+    content: '';
+    background: black center/cover no-repeat;
+    filter: blur(400px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.boton2{
+    color: white;
+    width: 215px;
+    background-color: black;
+    border-width: thick;
+    border-radius: 9px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: cursive;
+    font-size: medium;
+    margin-left: 31px;
+    margin-top: 15px; 
+}
+
+.juegoReto{
+    gap: 30px;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.juegoReto2{
+    gap: 30px;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.alcoholes, .liquidos, .solidos{
+    color: white;
+    border: 3px solid darkgoldenrod;
+    border-radius: 30px;
+    background: #4B5D67;
+    height: 50px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.titulo4{
+    border-style: double;
+    height: 31px;
+    text-align: center;
+    font-size: 25px;
+    width: 125px;
+    border-radius: 30px;
+    background: #323232;
+    color: #BBBBBB;
+
+}
+
+.añoSeleccionado2, .paisSeleccionado2{
+    color: white;
+}
+
+
+
+.fondo::before{
+    content: '';
+    background: black center/cover no-repeat;
+    filter: blur(400px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.boton3{
+    color: white;
+    width: 300px;
+    background-color: black;
+    border-width: thick;
+    border-radius: 9px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: cursive;
+    font-size: medium;
+    margin-left: 31px;
+    margin-top: 15px; 
+}
