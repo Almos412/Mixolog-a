@@ -187,7 +187,7 @@ Negroni.ingredientes.push(
     {liquido:"Vermut rojo", cantidad:"1 oz"},
     {liquido:"Campari", cantidad:"1 oz"},
     {solido:"Hielo", cantidad:"5 g"},
-    {solido:"Rodaja de naranja", cantidad:"1"},
+    {solido:"Cáscara de naranja", cantidad:"1"},
 )
 
 PiñaColada.ingredientes.push(
@@ -728,7 +728,7 @@ let ingredientesCorrectos = false
             break;
 
         case "Negroni":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputGinebra, inputVermutRojo, inputCampari, inputHielo, inputRodajaNaranja]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputGinebra, inputVermutRojo, inputCampari, inputHielo, inputCascaraNaranja]);
             break;
             
         case "Piña Colada":
@@ -773,7 +773,7 @@ let ingredientesCorrectos = false
 
         default:
             alert("No seleccionastes ningun ingrediente");
-
+            
     }
     if(ingredientesCorrectos){
         sectionJuego2.style.display = "none"
