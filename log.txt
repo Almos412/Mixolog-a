@@ -1,0 +1,17 @@
+commit 2001057b55c8ebcdc2c3354a0a4cb27a16a2b930
+Author: Alvaro Mosqueda <almos41294@gmail.com>
+Date:   Mon Dec 4 23:14:14 2023 -0600
+
+    Cambios de prueba
+
+commit 0e62d2d9b386275b032045a732664e7538cc5065
+Author: Alvaro Mosqueda <almos41294@gmail.com>
+Date:   Mon Dec 4 14:55:41 2023 -0600
+
+    No se realizaron cambios
+
+commit 79098ea6198590fa6979d97f9323119fd256d3e1
+Author: Alvaro Mosqueda <almos41294@gmail.com>
+Date:   Fri Dec 1 14:07:09 2023 -0600
+
+    Hice cambios a la formula de comenzar juego en el archivo .js, la simplifique para hacer más limpio el código
