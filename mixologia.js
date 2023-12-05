@@ -773,7 +773,7 @@ let ingredientesCorrectos = false
 
         default:
             alert("No seleccionastes ningun ingrediente");
-            
+
     }
     if(ingredientesCorrectos){
         sectionJuego2.style.display = "none"
