@@ -781,5 +781,4 @@ let ingredientesCorrectos = false
     }
 
 }
-//Solo es una prueba
 window.addEventListener("load", iniciarPagina)
