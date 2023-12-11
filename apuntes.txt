@@ -1,0 +1,43 @@
+function mostrarInformacionLiquidos(listaIngredientes, onzas, contenedor){
+    contenedor.innerHTML = ""
+
+    listaIngredientes.forEach((lista)=>{
+        if(lista.liquido !== undefined){
+        let listaDesplegada=`
+        <div id="descripcion" class="descripcion2">
+        <p> Lleva ${lista.liquido} en una cantidad de: </p>
+        </div>
+        `;
+        onzas.forEach((volumen)=>{
+            let uniqueIdLiquido = `${lista.liquido}_liquido_${volumen.nombre}`
+            listaDesplegada +=`
+            <input type="radio" name="${lista.nombre}_liquido" value="${volumen.nombre}" id="${uniqueIdLiquido}">
+        <label class="volumenes" for="${volumen.id}">${volumen.nombre}</label>
+            `
+        })
+        contenedor.innerHTML += listaDesplegada
+    }
+    })
+}
+
+function mostrarInformacionSolidos(listaIngredientes, cantidades, contenedor){
+    contenedor.innerHTML = ""
+
+    listaIngredientes.forEach((lista)=>{
+        if(lista.solido !== undefined){
+        let listaDesplegada=`
+        <div id="descripcion" class="descripcion2">
+        <p> Lleva ${lista.solido} en una cantidad de: </p>
+        </div>
+        `;
+        cantidades.forEach((cantidad)=>{
+            let uniqueIdSolido = `${lista.solido}_solido_${cantidad.nombre}`
+            listaDesplegada +=`
+            <input type="radio" name="${lista.nombre}_liquido" value="${cantidad.nombre}" id="${uniqueIdSolido}">
+        <label class="volumenes" for="${cantidad.id}">${cantidad.nombre}</label>
+            `
+        })
+        contenedor.innerHTML += listaDesplegada
+    }
+    })
+}

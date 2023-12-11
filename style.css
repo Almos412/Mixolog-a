@@ -204,11 +204,6 @@ input:checked + label{
     height: 200px;
 }
 
-.infoCompleta{
-color: white;
-
-}
-
 .infoCompleta::before{
     content: '';
     background: black center/cover no-repeat;
@@ -220,6 +215,23 @@ color: white;
     bottom: 0;
     z-index: -1;
 }
+
+.infoCompleta, .contenedorIngredientesPrincipal{
+    color: white;
+    
+    }
+    
+.contenedorIngredientesPrincipal::before{
+    content: '';
+    background: black center/cover no-repeat;
+    filter: blur(400px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+ }
 
 .boton2{
     color: white;
