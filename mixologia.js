@@ -89,6 +89,13 @@ let inputRodajaPina
 let inputCascaraLimon
 let inputTerronAzucar
 
+//SECCION MEDIDAS
+const sectionMedidas = document.getElementById("medidas")
+const contenedorIngredientes = document.getElementById("contenedorIngredientes")
+const contenedorImagen = document.getElementById("contenedorImagen")
+const contenedorTituloBebida = document.getElementById("tituloBebida2")
+
+
 //IMPRIMIR BEBIDAS
 const contenedorBebidas = document.getElementById("contenedorBebidas")
 let inputMargarita
@@ -324,6 +331,23 @@ const solidos =[
     {nombre:"Terrón de azucar", id:"label-terron_azucar"}
 ]
 
+const onzas =[
+    {nombre:"1/4 oz", id:"label-1/4"},
+    {nombre:"1/2 oz", id:"label-1/2"},
+    {nombre:"3/4 oz", id:"label-3/4"},
+    {nombre:"1 oz", id:"label-1"},
+    {nombre:"1 1/2 oz", id:"label-11/2"},
+    {nombre:"2 oz", id:"label-2"},
+    {nombre:"2 1/2 oz", id:"label-21/2"},
+    {nombre:"3 oz", id:"label-3"},
+]
+
+const cantidades =[
+    {nombre:"1", id:"label-1c"},
+    {nombre:"2", id:"label-2c"},
+    {nombre:"3", id:"label-3c"},
+]
+
 tragos.push(Margarita, Martini, Mojito, OldFashioned, Negroni, PiñaColada, Caipirinha, Cosmopolitan, WhiskySour, Manhattan, Daiquiri, MaiTai, MoscowMule, AperolSpritz, TomCollins)
 
 function iniciarPagina(){
@@ -332,6 +356,7 @@ sectionGuia.style.display = "none"
 sectionInformacionBebidas.style.display = "none"
 sectionJuego.style.display="none"
 sectionJuego2.style.display="none"
+sectionMedidas.style.display="none"
 
 }
 
@@ -781,4 +806,40 @@ let ingredientesCorrectos = false
     }
 
 }
+
+function extraerInformacionMedidas(bebidaJuego){
+let listaIngredientes
+let imagenBebida
+    for (let i = 0; i < tragos.length; i++) {
+        if(bebidaJuego === tragos[i].id2){
+            nombreBebida = tragos [i].nombre
+            listaIngredientes = tragos[i].ingredientes
+            imagenBebida = tragos[i].foto
+
+            break;
+        }
+    }
+    imprimirImagen(imagenBebida, contenedorImagen)
+    imprimirTitulo(nombreBebida, contenedorTituloBebida)
+    mostrarInformacionBebida2(listaIngredientes)
+}
+
+function mostrarInformacionBebida2(listaIngredientes){
+    contenedorIngredientes.innerHTML = ""
+
+    listaIngredientes.forEach((lista)=>{
+        listaDesplegada=`
+        <div id="descripcion" class="descripcion1">
+        ${lista.liquido ? `<p> Lleva ${lista.liquido} en una cantidad de: </p>` : ''}
+        ${lista.solido ? `<p> Lleva ${lista.solido} en una cantidad de: </p>` : ''}
+        </div>
+        `
+        contenedorIngredientes.innerHTML += listaDesplegada
+    })
+}
+
+function juegoMedidas(){
+
+}
+
 window.addEventListener("load", iniciarPagina)
