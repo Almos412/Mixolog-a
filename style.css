@@ -192,7 +192,7 @@ input:checked + label{
     align-items: center;
 }
 
-.info, .juegoBebidas2{
+.info, .juegoBebidas2, .medidas1{
     display: flex;
     flex-direction: column;
     justify-content: center;

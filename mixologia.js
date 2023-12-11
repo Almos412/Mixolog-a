@@ -91,9 +91,10 @@ let inputTerronAzucar
 
 //SECCION MEDIDAS
 const sectionMedidas = document.getElementById("medidas")
-const contenedorIngredientes = document.getElementById("contenedorIngredientes")
 const contenedorImagen = document.getElementById("contenedorImagen")
 const contenedorTituloBebida = document.getElementById("tituloBebida2")
+const contenedorIngredientes = document.getElementById("contenedorIngredientes")
+const contenedorIngredientes2 = document.getElementById("contenedorIngredientes2")
 
 
 //IMPRIMIR BEBIDAS
@@ -331,7 +332,7 @@ const solidos =[
     {nombre:"Terrón de azucar", id:"label-terron_azucar"}
 ]
 
-const onzas =[
+const volumenes =[
     {nombre:"1/4 oz", id:"label-1/4"},
     {nombre:"1/2 oz", id:"label-1/2"},
     {nombre:"3/4 oz", id:"label-3/4"},
@@ -340,12 +341,17 @@ const onzas =[
     {nombre:"2 oz", id:"label-2"},
     {nombre:"2 1/2 oz", id:"label-21/2"},
     {nombre:"3 oz", id:"label-3"},
+    {nombre:"2-3 dashes", id:"label-dashes"},
+    {nombre:"Al gusto", id:"label-algusto"}
 ]
 
 const cantidades =[
     {nombre:"1", id:"label-1c"},
     {nombre:"2", id:"label-2c"},
     {nombre:"3", id:"label-3c"},
+    {nombre:"4", id:"label-4c"},
+    {nombre:"5", id:"label-5c"},
+    {nombre:"5 g", id:"label-5g"}
 ]
 
 tragos.push(Margarita, Martini, Mojito, OldFashioned, Negroni, PiñaColada, Caipirinha, Cosmopolitan, WhiskySour, Manhattan, Daiquiri, MaiTai, MoscowMule, AperolSpritz, TomCollins)
@@ -802,7 +808,8 @@ let ingredientesCorrectos = false
     }
     if(ingredientesCorrectos){
         sectionJuego2.style.display = "none"
-        sectionJuego.style.display = "flex"
+        sectionMedidas.style.display = "flex"
+        extraerInformacionMedidas(bebidaJuego)
     }
 
 }
@@ -821,22 +828,55 @@ let imagenBebida
     }
     imprimirImagen(imagenBebida, contenedorImagen)
     imprimirTitulo(nombreBebida, contenedorTituloBebida)
-    mostrarInformacionBebida2(listaIngredientes)
+    mostrarInformacionLiquidos(listaIngredientes, volumenes, contenedorIngredientes)
+    mostrarInformacionSolidos(listaIngredientes, cantidades, contenedorIngredientes2)
 }
 
-function mostrarInformacionBebida2(listaIngredientes){
-    contenedorIngredientes.innerHTML = ""
+function mostrarInformacionLiquidos(listaIngredientes, onzas, contenedor){
+    contenedor.innerHTML = ""
 
     listaIngredientes.forEach((lista)=>{
-        listaDesplegada=`
-        <div id="descripcion" class="descripcion1">
-        ${lista.liquido ? `<p> Lleva ${lista.liquido} en una cantidad de: </p>` : ''}
-        ${lista.solido ? `<p> Lleva ${lista.solido} en una cantidad de: </p>` : ''}
+        if(lista.liquido !== undefined){
+        let listaDesplegada=`
+        <div id="descripcion" class="descripcion2">
+        <p> Lleva ${lista.liquido} en una cantidad de: </p>
         </div>
-        `
-        contenedorIngredientes.innerHTML += listaDesplegada
+        `;
+        onzas.forEach((volumen)=>{
+            let uniqueIdLiquido = `${lista.liquido}_liquido_${volumen.nombre}`
+            listaDesplegada +=`
+            <input type="radio" name="${lista.nombre}_liquido" value="${volumen.nombre}" id="${uniqueIdLiquido}">
+        <label class="volumenes" for="${volumen.id}">${volumen.nombre}</label>
+            `
+        })
+        contenedor.innerHTML += listaDesplegada
+    }
     })
 }
+
+function mostrarInformacionSolidos(listaIngredientes, cantidades, contenedor){
+    contenedor.innerHTML = ""
+
+    listaIngredientes.forEach((lista)=>{
+        if(lista.solido !== undefined){
+        let listaDesplegada=`
+        <div id="descripcion" class="descripcion2">
+        <p> Lleva ${lista.solido} en una cantidad de: </p>
+        </div>
+        `;
+        cantidades.forEach((cantidad)=>{
+            let uniqueIdSolido = `${lista.solido}_solido_${cantidad.nombre}`
+            listaDesplegada +=`
+            <input type="radio" name="${lista.nombre}_liquido" value="${cantidad.nombre}" id="${uniqueIdSolido}">
+        <label class="volumenes" for="${cantidad.id}">${cantidad.nombre}</label>
+            `
+        })
+        contenedor.innerHTML += listaDesplegada
+    }
+    })
+}
+
+
 
 function juegoMedidas(){
 
