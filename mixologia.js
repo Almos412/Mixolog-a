@@ -845,8 +845,8 @@ function mostrarInformacionLiquidos(listaIngredientes, onzas, contenedor){
         onzas.forEach((volumen)=>{
             let uniqueIdLiquido = `${lista.liquido}_liquido_${volumen.nombre}`
             listaDesplegada +=`
-            <input type="radio" name="${lista.nombre}_liquido" value="${volumen.nombre}" id="${uniqueIdLiquido}">
-        <label class="volumenes" for="${volumen.id}">${volumen.nombre}</label>
+            <input type="radio" name="${lista.liquido}" value="${volumen.nombre}" id="${uniqueIdLiquido}">
+        <label class="volumenes" for="${uniqueIdLiquido}">${volumen.nombre}</label>
             `
         })
         contenedor.innerHTML += listaDesplegada
@@ -867,8 +867,8 @@ function mostrarInformacionSolidos(listaIngredientes, cantidades, contenedor){
         cantidades.forEach((cantidad)=>{
             let uniqueIdSolido = `${lista.solido}_solido_${cantidad.nombre}`
             listaDesplegada +=`
-            <input type="radio" name="${lista.nombre}_liquido" value="${cantidad.nombre}" id="${uniqueIdSolido}">
-        <label class="volumenes" for="${cantidad.id}">${cantidad.nombre}</label>
+            <input type="radio" name="${lista.solido}" value="${cantidad.nombre}" id="${uniqueIdSolido}">
+        <label class="volumenes" for="${uniqueIdSolido}">${cantidad.nombre}</label>
             `
         })
         contenedor.innerHTML += listaDesplegada

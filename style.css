@@ -221,10 +221,11 @@ input:checked + label{
     
     }
     
+    
 .contenedorIngredientesPrincipal::before{
     content: '';
     background: black center/cover no-repeat;
-    filter: blur(400px);
+    filter: blur(1000px);
     position: absolute;
     top: 0;
     left: 0;
@@ -332,3 +333,25 @@ input:checked + label{
     margin-left: 31px;
     margin-top: 15px; 
 }
+
+.volumenes{
+    color: white;
+    border: 3px solid rgb(150, 121, 47);
+    font-size: small;
+    border-radius: 30px;
+    background: #4B5D67;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.ingredientesoz, .ingredientesgramos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
