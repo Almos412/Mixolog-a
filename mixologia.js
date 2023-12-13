@@ -810,7 +810,7 @@ let ingredientesCorrectos = false
             break;
 
         case "Tom Collins":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputGinebra, inputJarabeAzucar, inputJugoLimon, inputAguaMineral, inputJugoLimon, inputHielo, inputRodajaNaranja, inputCereza]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputGinebra, inputJarabeAzucar, inputAguaMineral, inputJugoLimon, inputHielo, inputRodajaNaranja, inputCereza]);
             break;
 
         default:
