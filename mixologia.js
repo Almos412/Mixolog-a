@@ -95,6 +95,10 @@ const contenedorImagen = document.getElementById("contenedorImagen")
 const contenedorTituloBebida = document.getElementById("tituloBebida2")
 const contenedorIngredientes = document.getElementById("contenedorIngredientes")
 const contenedorIngredientes2 = document.getElementById("contenedorIngredientes2")
+let idsLiquidos = []
+let idsSolidos = []
+const botonJuego4 = document.getElementById("botonJuego4")
+const botonRegreso5 = document.getElementById("botonRegreso5")
 
 
 //IMPRIMIR BEBIDAS
@@ -347,10 +351,14 @@ const volumenes =[
 
 const cantidades =[
     {nombre:"1", id:"label-1c"},
+    {nombre:"1/2 ", id:"label-1/2"},
     {nombre:"2", id:"label-2c"},
     {nombre:"3", id:"label-3c"},
     {nombre:"4", id:"label-4c"},
     {nombre:"5", id:"label-5c"},
+    {nombre:"6-8", id:"label-6c"},
+    {nombre:"2 cucharadas", id:"label-2cucha"},
+    {nombre:"1 g", id:"label-1g"},
     {nombre:"5 g", id:"label-5g"}
 ]
 
@@ -400,6 +408,7 @@ function iniciarInputs2(contenedor, drinks, nombreDeClase){
 function regresarAlJuego(){
     sectionJuego2.style.display="none"
     sectionJuego.style.display ="flex"
+    sectionMedidas.style.display="none"
 }
 
 
@@ -410,6 +419,8 @@ botonRegreso2.addEventListener("click", regresarGuia)
 botonJuego.addEventListener("click", iniciarJuego)
 botonRegreso3.addEventListener("click", iniciarPagina)
 botonRegreso4.addEventListener("click", regresarAlJuego)
+botonJuego4.addEventListener("click", juegoMedidas)
+botonRegreso5.addEventListener("click", regresarAlJuego )
 
 
 function iniciarGuia(){
@@ -614,7 +625,7 @@ inputGinebra = document.getElementById("label-ginebra")
 inputVodka = document.getElementById("label-vodka")
 inputRonBlanco = document.getElementById("label-ron_blanco")
 inputWhiskyBourbon = document.getElementById("label-whisky_bourbon")
-inputChaca = document.getElementById("label-chaca")
+inputChaca = document.getElementById("label-cachaca")
 inputRonOscuro = document.getElementById("label-ron_oscuro")
 inputAperol = document.getElementById("label-aperol")
 inputVinoEspumoso = document.getElementById("label-vino")
@@ -747,7 +758,7 @@ let ingredientesCorrectos = false
         break;
 
         case "Martini":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputGinebra, inputVodka, inputVermutSeco, inputHielo, inputAceitun/una, inputCascaraLimon]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputGinebra, inputVodka, inputVermutSeco, inputHielo, inputAceituna, inputCascaraLimon]);
             break;
 
         case "Mojito":
@@ -828,12 +839,16 @@ let imagenBebida
     }
     imprimirImagen(imagenBebida, contenedorImagen)
     imprimirTitulo(nombreBebida, contenedorTituloBebida)
-    mostrarInformacionLiquidos(listaIngredientes, volumenes, contenedorIngredientes)
-    mostrarInformacionSolidos(listaIngredientes, cantidades, contenedorIngredientes2)
+    idsLiquidos= mostrarInformacionLiquidos(listaIngredientes, volumenes, contenedorIngredientes)
+    idsSolidos= mostrarInformacionSolidos(listaIngredientes, cantidades, contenedorIngredientes2)
+    crearVariablesLiquidos()
+    crearVariablesSolidos()
+
 }
 
 function mostrarInformacionLiquidos(listaIngredientes, onzas, contenedor){
     contenedor.innerHTML = ""
+    let idsLiquidosLocal = []
 
     listaIngredientes.forEach((lista)=>{
         if(lista.liquido !== undefined){
@@ -843,19 +858,22 @@ function mostrarInformacionLiquidos(listaIngredientes, onzas, contenedor){
         </div>
         `;
         onzas.forEach((volumen)=>{
-            let uniqueIdLiquido = `${lista.liquido}_liquido_${volumen.nombre}`
+            let uniqueIdLiquido = `${lista.liquido}_liquido_${volumen.id}`
             listaDesplegada +=`
             <input type="radio" name="${lista.liquido}" value="${volumen.nombre}" id="${uniqueIdLiquido}">
         <label class="volumenes" for="${uniqueIdLiquido}">${volumen.nombre}</label>
             `
+            idsLiquidosLocal.push(uniqueIdLiquido)
         })
         contenedor.innerHTML += listaDesplegada
     }
     })
+    return idsLiquidosLocal
 }
 
 function mostrarInformacionSolidos(listaIngredientes, cantidades, contenedor){
     contenedor.innerHTML = ""
+    let idsSolidosLocal = []
 
     listaIngredientes.forEach((lista)=>{
         if(lista.solido !== undefined){
@@ -865,20 +883,117 @@ function mostrarInformacionSolidos(listaIngredientes, cantidades, contenedor){
         </div>
         `;
         cantidades.forEach((cantidad)=>{
-            let uniqueIdSolido = `${lista.solido}_solido_${cantidad.nombre}`
+            let uniqueIdSolido = `${lista.solido}_solido_${cantidad.id}`
             listaDesplegada +=`
             <input type="radio" name="${lista.solido}" value="${cantidad.nombre}" id="${uniqueIdSolido}">
         <label class="volumenes" for="${uniqueIdSolido}">${cantidad.nombre}</label>
             `
+            idsSolidosLocal.push(uniqueIdSolido)
         })
         contenedor.innerHTML += listaDesplegada
     }
     })
+    return idsSolidosLocal
+}
+
+function crearVariablesLiquidos(){
+    for (let i = 0; i < idsLiquidos.length; i++) {
+    let nombreVariable = `variableLiquido${i + 1}` 
+    window[nombreVariable] = document.getElementById(idsLiquidos[i])       
+    }
+}
+
+function crearVariablesSolidos(){
+    for (let i = 0; i < idsSolidos.length; i++) {
+    let nombreVariable = `variableSolido${i + 1}` 
+    window[nombreVariable] = document.getElementById(idsSolidos[i])       
+    }
+}
+
+function revisarMedidas(nombreBebida, medidasRequeridas){
+    const seleccionMedidas = medidasRequeridas.every((medida)=> medida.checked);
+
+    if(seleccionMedidas){
+        alert ("Es correcto, ya sabes preparar con las medidas correctas un/una "+nombreBebida)
+        return true;
+    }else{
+        alert("No seleccionaste las medidas correctas, vuelve a intentarlo")
+        return false;
+    }
 }
 
 
-
 function juegoMedidas(){
+    let ingredientesCorrectos2 = false
+    switch(nombreBebida){
+        case "Margarita":
+        ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido6, variableLiquido14, variableLiquido24, variableSolido9, variableSolido20, variableSolido21]);
+        break;
+
+        case "Martini":
+            ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido7, variableLiquido12, variableSolido10, variableSolido1]);
+            break;
+
+        case "Mojito":
+            ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido6, variableLiquido14, variableLiquido24, variableLiquido31, variableSolido7, variableSolido20, variableSolido21]);
+            break;
+
+        case "Old Fashioned":
+            ingredientesCorrectos2 = revisarMedidas(nombreBebida,[variableLiquido6, variableLiquido19, variableLiquido22, variableSolido1, variableSolido11]);
+            break;
+
+        case "Negroni":
+            ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido4, variableLiquido14, variableLiquido24, variableSolido10, variableSolido11]);
+            break;
+            
+        case "Piña Colada":
+            ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido6, variableLiquido18, variableLiquido28, variableSolido10, variableSolido11]);
+            break;
+            
+        case "Caipirinha":
+            ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido6, variableSolido8, variableSolido20, variableSolido22]);
+            break;
+            
+        case "Cosmopolitan":
+            ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido5, variableLiquido14, variableLiquido22, variableLiquido32, variableSolido10, variableSolido11]);
+            break;
+
+        case "Whisky Sour":
+            ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido6, variableLiquido13, variableLiquido23, variableLiquido40, variableSolido10, variableSolido11]);
+            break;
+
+        case "Manhattan":
+            ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido6, variableLiquido14, variableLiquido29, variableSolido10, variableSolido11]);
+            break;
+
+        case "Daiquiri":
+            ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido6, variableLiquido13, variableLiquido23, variableSolido10, variableSolido11]);
+            break;
+
+        case "Mai Tai":
+            ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido6, variableLiquido13, variableLiquido23, variableLiquido34, variableLiquido44, variableSolido10, variableSolido11]);
+            break;
+
+        case "Moscow Mule":
+            ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido6, variableLiquido14, variableLiquido30, variableSolido10, variableSolido11]);
+            break;
+
+        case "Aperol Spritz":
+            ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido8, variableLiquido18, variableLiquido30, variableSolido10, variableSolido11]);
+            break;
+
+        case "Tom Collins":
+            ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido6, variableLiquido13, variableLiquido23, variableLiquido40, variableSolido10, variableSolido11]);
+            break;
+
+        default:
+            alert("No seleccionastes ninguna medida");
+
+    }
+    if(ingredientesCorrectos2){
+        sectionJuego.style.display = "flex"
+        sectionMedidas.style.display = "none"
+    }
 
 }
 
