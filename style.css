@@ -340,8 +340,8 @@ input:checked + label{
     font-size: small;
     border-radius: 30px;
     background: #4B5D67;
-    height: 45px;
-    width: 45px;
+    height: 60px;
+    width: 60px;
     display: flex;
     justify-content: center;
     flex-direction: column-reverse;
