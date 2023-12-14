@@ -48,48 +48,6 @@ let inputMoscowMule2
 let inputAperolSpritz2
 let inputTomCollins2
 
-let inputTequila
-let inputGinebra
-let inputVodka
-let inputRonBlanco
-let inputWhiskyBourbon
-let inputChaca
-let inputRonOscuro
-let inputAperol
-let inputVinoEspumoso
-let inputWhisky
-
-let inputTripleSec
-let inputJugoLimon
-let inputVermutSeco
-let inputJarabeAzucar
-let inputJugoLima
-let inputAguaMineral
-let inputAngosturaBitters
-let inputVermutRojo
-let inputCampari
-let inputCremaCoco
-let inputJugoPina
-let inputLicorArandano
-let inputClaraHuevo
-let inputVermutDulce
-let inputLicorAlmendra
-let inputLicorNaranja
-let inputAguaGengibre
-
-let inputSal 
-let inputRodajaLimon
-let inputHielo
-let inputAceituna
-let inputHojaMenta
-let inputRodajaLima
-let inputCereza
-let inputCascaraNaranja
-let inputRodajaNaranja
-let inputRodajaPina
-let inputCascaraLimon
-let inputTerronAzucar
-
 //SECCION MEDIDAS
 const sectionMedidas = document.getElementById("medidas")
 const contenedorImagen = document.getElementById("contenedorImagen")
@@ -290,51 +248,51 @@ TomCollins.ingredientes.push(
 //LISTAS PARA EL JUEGO
 
 const alcoholes = [
-    {nombre:"Tequila", id:"label-tequila"},
-    {nombre:"Ginebra", id:"label-ginebra"},
-    {nombre:"Vodka", id:"label-vodka"},
-    {nombre:"Ron Blanco", id:"label-ron_blanco"},
-    {nombre:"Whisky Bourbon", id:"label-whisky_bourbon"},
-    {nombre:"Cachaca", id:"label-cachaca"},
-    {nombre:"Ron Oscuro", id:"label-ron_oscuro"},
-    {nombre:"Aperol", id:"label-aperol"},
-    {nombre:"Vino espumoso", id:"label-vino"},
-    {nombre:"Whisky", id:"label-whisky"},
+    {nombre:"Tequila", id:"label-tequila", input:"Tequila"},
+    {nombre:"Ginebra", id:"label-ginebra", input:"Ginebra"},
+    {nombre:"Vodka", id:"label-vodka", input:"Vodka"},
+    {nombre:"Ron Blanco", id:"label-ron_blanco", input:"RonBlanco"},
+    {nombre:"Whisky Bourbon", id:"label-whisky_bourbon", input:"WhiskyBourbon"},
+    {nombre:"Cachaca", id:"label-cachaca", input:"Chaca"},
+    {nombre:"Ron Oscuro", id:"label-ron_oscuro", input:"RonOscuro"},
+    {nombre:"Aperol", id:"label-aperol", input:"Aperol"},
+    {nombre:"Vino espumoso", id:"label-vino", input:"VinoEspumoso"},
+    {nombre:"Whisky", id:"label-whisky", input:"Whisky"},
 ]
 
 const liquidos = [
-    {nombre:"Triple sec", id:"label-triple"},
-    {nombre:"Juego de limón", id:"label-jugo_limon"},
-    {nombre:"Vermut seco", id:"label-vermut"},
-    {nombre:"Jarabe de azucar", id:"label-jarabe_azucar"},
-    {nombre:"Jugo de lima", id:"label-jugo_lima"},
-    {nombre:"Agua mineral", id:"label-agua_mineral"},
-    {nombre:"Angostura bitters", id:"label-angostura_bitters"},
-    {nombre:"Vermut rojo", id:"label-vermut_rojo"},
-    {nombre:"Campari", id:"label-campari"},
-    {nombre:"Crema de coco", id:"label-crema_coco"},
-    {nombre:"Jugo de piña", id:"label-jugo_pina"},
-    {nombre:"Licor de arandano", id:"label-licor_arandano"},
-    {nombre:"Clara de huevo", id:"label-clara"},
-    {nombre:"Vermut dulce", id:"label-vermut_dulce"},
-    {nombre:"Licor de almendra", id:"label-licor_almendra"},
-    {nombre:"Licor de naranja", id:"label-licor_naranja"},
-    {nombre:"Agua de gengibre", id:"label-agua_gengibre"},
+    {nombre:"Triple sec", id:"label-triple", input:"TripleSec"},
+    {nombre:"Juego de limón", id:"label-jugo_limon", input:"JugoLimon"},
+    {nombre:"Vermut seco", id:"label-vermut", input:"VermutSeco"},
+    {nombre:"Jarabe de azucar", id:"label-jarabe_azucar", input:"JarabeAzucar"},
+    {nombre:"Jugo de lima", id:"label-jugo_lima", input:"JugoLima"},
+    {nombre:"Agua mineral", id:"label-agua_mineral", input:"AguaMineral"},
+    {nombre:"Angostura bitters", id:"label-angostura_bitters", input:"AngosturaBitters"},
+    {nombre:"Vermut rojo", id:"label-vermut_rojo", input:"VermutRojo"},
+    {nombre:"Campari", id:"label-campari", input:"Campari"},
+    {nombre:"Crema de coco", id:"label-crema_coco", input:"CremaCoco"},
+    {nombre:"Jugo de piña", id:"label-jugo_pina", input:"JugoPina"},
+    {nombre:"Licor de arandano", id:"label-licor_arandano", input:"LicorArandano"},
+    {nombre:"Clara de huevo", id:"label-clara", input:"ClaraHuevo"},
+    {nombre:"Vermut dulce", id:"label-vermut_dulce", input:"VermutDulce"},
+    {nombre:"Licor de almendra", id:"label-licor_almendra", input:"LicorAlmendra"},
+    {nombre:"Licor de naranja", id:"label-licor_naranja", input:"LicorNaranja"},
+    {nombre:"Agua de gengibre", id:"label-agua_gengibre", input:"AguaGengibre"},
 ]
 
 const solidos =[
-    {nombre:"Sal", id:"label-sal"},
-    {nombre:"Rodaja de limón", id:"label-rodaja_limon"},
-    {nombre:"Hielo", id:"label-hielo"},
-    {nombre:"Aceituna", id:"label-aceituna"},
-    {nombre:"Hoja de menta fresca", id:"label-menta"},
-    {nombre:"Rodajas de lima", id:"label-rodaja_lima"},
-    {nombre:"Cereza", id:"label-cereza"},
-    {nombre:"Cáscara de naranja", id:"label-cascara_naranja"},
-    {nombre:"Rodaja de naranja", id:"label-rodaja_naranja"},
-    {nombre:"Rodaja de piña", id:"label-rodaja_pina"},
-    {nombre:"Cáscara de limón", id:"label-cascara_limon"},
-    {nombre:"Terrón de azucar", id:"label-terron_azucar"}
+    {nombre:"Sal", id:"label-sal", input:"Sal"},
+    {nombre:"Rodaja de limón", id:"label-rodaja_limon", input:"RodajaLimon"},
+    {nombre:"Hielo", id:"label-hielo", input:"Hielo"},
+    {nombre:"Aceituna", id:"label-aceituna", input:"Aceituna"},
+    {nombre:"Hoja de menta fresca", id:"label-menta", input:"HojaMenta"},
+    {nombre:"Rodajas de lima", id:"label-rodaja_lima", input:"RodajaLima"},
+    {nombre:"Cereza", id:"label-cereza", input:"Cereza"},
+    {nombre:"Cáscara de naranja", id:"label-cascara_naranja", input:"CascaraNaranja"},
+    {nombre:"Rodaja de naranja", id:"label-rodaja_naranja", input:"RodajaNaranja"},
+    {nombre:"Rodaja de piña", id:"label-rodaja_pina", input:"RodajaPina"},
+    {nombre:"Cáscara de limón", id:"label-cascara_limon", input:"CascaraLimon"},
+    {nombre:"Terrón de azucar", id:"label-terron_azucar", input:"TerronAzucar"}
 ]
 
 const volumenes =[
@@ -608,12 +566,21 @@ function shuffleArray(array) {
 }
 
 
+function crearInputsconIDs(lista){
+
+    lista.forEach((valor)=>{
+    let inputs = `input${valor.input}`
+    window[inputs] = document.getElementById(valor.id)
+    })
+}
+
+
 function imprimirListas(contenedor, lista, nombreDeClase){
     shuffleArray(lista)
     contenedor.innerHTML = ""
     lista.forEach((valor) =>{
         opcionMateriales =`
-        <input  type="checkbox" id=${valor.id} name="pisto"/>
+        <input  type="checkbox" id=${valor.id} name=${valor.nombre}/>
         <label class=${nombreDeClase}  for=${valor.id} >
             <p>${valor.nombre}</p>
         </label>
@@ -621,47 +588,7 @@ function imprimirListas(contenedor, lista, nombreDeClase){
         contenedor.innerHTML += opcionMateriales
 
 })
-inputTequila = document.getElementById("label-tequila")
-inputGinebra = document.getElementById("label-ginebra")
-inputVodka = document.getElementById("label-vodka")
-inputRonBlanco = document.getElementById("label-ron_blanco")
-inputWhiskyBourbon = document.getElementById("label-whisky_bourbon")
-inputChaca = document.getElementById("label-cachaca")
-inputRonOscuro = document.getElementById("label-ron_oscuro")
-inputAperol = document.getElementById("label-aperol")
-inputVinoEspumoso = document.getElementById("label-vino")
-inputWhisky = document.getElementById("label-whisky")
-
-inputTripleSec = document.getElementById("label-triple")
-inputJugoLimon = document.getElementById("label-jugo_limon")
-inputVermutSeco = document.getElementById("label-vermut")
-inputJarabeAzucar = document.getElementById("label-jarabe_azucar")
-inputJugoLima = document.getElementById("label-jugo_lima")
-inputAguaMineral = document.getElementById("label-agua_mineral")
-inputAngosturaBitters = document.getElementById("label-angostura_bitters")
-inputVermutRojo = document.getElementById("label-vermut_rojo")
-inputCampari = document.getElementById("label-campari")
-inputCremaCoco = document.getElementById("label-crema_coco")
-inputJugoPina = document.getElementById("label-jugo_pina")
-inputLicorArandano = document.getElementById("label-licor_arandano")
-inputClaraHuevo = document.getElementById("label-clara")
-inputVermutDulce = document.getElementById("label-vermut_dulce")
-inputLicorAlmendra = document.getElementById("label-licor_almendra")
-inputLicorNaranja = document.getElementById("label-licor_naranja")
-inputAguaGengibre = document.getElementById("label-agua_gengibre")
-
-inputSal = document.getElementById("label-sal")
-inputRodajaLimon = document.getElementById("label-rodaja_limon")
-inputHielo = document.getElementById("label-hielo")
-inputAceituna = document.getElementById("label-aceituna")
-inputHojaMenta = document.getElementById("label-menta")
-inputRodajaLima = document.getElementById("label-rodaja_lima")
-inputCereza = document.getElementById("label-cereza")
-inputCascaraNaranja = document.getElementById("label-cascara_naranja")
-inputRodajaNaranja = document.getElementById("label-rodaja_naranja")
-inputRodajaPina = document.getElementById("label-rodaja_pina")
-inputCascaraLimon = document.getElementById("label-cascara_limon")
-inputTerronAzucar = document.getElementById("label-terron_azucar")
+crearInputsconIDs(lista)
 }
 
 function seleccionarBebidaJuego(){
