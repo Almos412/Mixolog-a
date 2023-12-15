@@ -32,6 +32,9 @@ const sectionAñoJuego = document.getElementById("añoJuego")
 const botonRegreso4 = document.getElementById("botonRegreso4")
 const botonJuego3 = document.getElementById("botonJuego3")
 let nombreBebida
+let listaDeInputsAlcoholes = []
+let listaDeInputsLiquidos = []
+let listaDeInputsSolidos = []
 let inputMargarita2
 let inputMartini2
 let inputMojito2
@@ -567,11 +570,13 @@ function shuffleArray(array) {
 
 
 function crearInputsconIDs(lista){
-
+let listaDeInputsLocal = []
     lista.forEach((valor)=>{
-    let inputs = `input${valor.input}`
-    window[inputs] = document.getElementById(valor.id)
+    let inputId = `input${valor.input}`
+    window[inputId] = document.getElementById(valor.id)
+   listaDeInputsLocal.push(window[inputId]);
     })
+    return listaDeInputsLocal
 }
 
 
@@ -588,7 +593,7 @@ function imprimirListas(contenedor, lista, nombreDeClase){
         contenedor.innerHTML += opcionMateriales
 
 })
-crearInputsconIDs(lista)
+return listaInputs=crearInputsconIDs(lista)
 }
 
 function seleccionarBebidaJuego(){
@@ -628,9 +633,9 @@ function seleccionarBebidaJuego(){
         return
     }
     extraerInformacionJuego(bebidaJuego)
-    imprimirListas(contenedorJuego, alcoholes, "alcoholes")
-    imprimirListas(contenedorJuego2, liquidos, "liquidos")
-    imprimirListas(contenedorJuego3, solidos, "solidos")
+    listaDeInputsAlcoholes=imprimirListas(contenedorJuego, alcoholes, "alcoholes")
+    listaDeInputsLiquidos=imprimirListas(contenedorJuego2, liquidos, "liquidos")
+    listaDeInputsSolidos=imprimirListas(contenedorJuego3, solidos, "solidos")
     sectionJuego.style.display="none"
     sectionJuego2.style.display="flex"
 }
@@ -653,7 +658,6 @@ function extraerInformacionJuego(bebidaJuego){
     imprimirImagen(imagenBebida, sectionImagenJuego)
     imprimirPais(paisOrigen, sectionPaisJuego)
     imprimirAño(añoCreacion, sectionAñoJuego)
-    //console.log(nombreBebida)
     console.log(imagenBebida)
     console.log(paisOrigen)
     console.log(añoCreacion)
@@ -665,80 +669,161 @@ function iniciarJuego2(){
     botonJuego3.addEventListener("click", comenzarJuego)
 }
 
-function revisarIngredientes(nombreBebida, ingredientesRequeridos){
-    const seleccionIngredientes = ingredientesRequeridos.every((ingrediente)=> ingrediente.checked);
+function ingredientesCorrectos3(nombreBebida) {
+    switch (nombreBebida) {
+        case "Margarita":
+            return [inputTequila, inputTripleSec, inputJugoLimon, inputSal, inputHielo, inputRodajaLimon];
 
-    if(seleccionIngredientes){
-        alert ("Es correcto, ya sabes como preparar un/una "+nombreBebida)
-        return true;
-    }else{
-        alert("No seleccionaste los ingredientes correctos, vuelve a intentarlo")
-        return false;
+        case "Martini":
+            return [inputGinebra, inputVodka, inputVermutSeco, inputHielo, inputAceituna, inputCascaraLimon];
+
+        case "Mojito":
+            return [inputRonBlanco, inputJarabeAzucar, inputJugoLima, inputAguaMineral, inputHojaMenta, inputHielo, inputRodajaLima];
+
+        case "Old Fashioned":
+            return [inputWhiskyBourbon, inputAngosturaBitters, inputJarabeAzucar, inputTerronAzucar, inputCascaraNaranja, inputCereza];
+
+        case "Negroni":
+            return [inputGinebra, inputVermutRojo, inputCampari, inputHielo, inputCascaraNaranja];
+
+        case "Piña Colada":
+            return [inputRonBlanco, inputCremaCoco, inputJugoPina, inputHielo, inputRodajaPina, inputCereza];
+
+        case "Caipirinha":
+            return [inputChaca, inputJarabeAzucar, inputHielo, inputJugoLimon];
+
+        case "Cosmopolitan":
+            return [inputVodka, inputTripleSec, inputLicorArandano, inputJugoLimon, inputHielo, inputRodajaLimon, inputCascaraNaranja];
+
+        case "Whisky Sour":
+            return [inputWhisky, inputJarabeAzucar, inputJugoLimon, inputClaraHuevo, inputHielo, inputRodajaNaranja, inputCereza];
+
+        case "Manhattan":
+            return [inputWhisky, inputVermutDulce, inputAngosturaBitters, inputHielo, inputCereza];
+
+        case "Daiquiri":
+            return [inputRonBlanco, inputJarabeAzucar, inputJugoLimon, inputHielo, inputRodajaLimon];
+
+        case "Mai Tai":
+            return [inputRonOscuro, inputLicorAlmendra, inputLicorNaranja, inputRonBlanco, inputJugoLimon, inputHielo, inputRodajaPina, inputCereza];
+
+        case "Moscow Mule":
+            return [inputVodka, inputJugoLima, inputAguaGengibre, inputHielo, inputRodajaLima];
+
+        case "Aperol Spritz":
+            return [inputAperol, inputVinoEspumoso, inputAguaMineral, inputHielo, inputRodajaNaranja];
+
+        case "Tom Collins":
+            return [inputGinebra, inputJarabeAzucar, inputAguaMineral, inputJugoLimon, inputHielo, inputRodajaNaranja, inputCereza];
+
+        default:
+            return [];
     }
 }
 
+function verificarIngredientes(inputs, nombreBebida){
+const ingredientes = ingredientesCorrectos3(nombreBebida)
+
+for(const input of inputs){
+    const checkbox = document.getElementById(input.id)
+
+    if(checkbox){
+        const inputMarcado = ingredientes.includes(input)
+
+        if(checkbox.checked !== inputMarcado){
+            return false
+        }
+    }
+}
+
+for(const input of inputs){
+    const checkbox = document.getElementById(input.id)
+
+    if(checkbox){
+        const inputDesmarcado = !ingredientes.includes(input)
+
+        if(inputDesmarcado && checkbox.checked){
+            return false
+        }
+    }
+}
+return true
+
+}
+
+function revisarIngredientes(nombreBebida){
+    if(verificarIngredientes(listaDeInputsAlcoholes, nombreBebida) && verificarIngredientes(listaDeInputsLiquidos, nombreBebida) && verificarIngredientes(listaDeInputsSolidos, nombreBebida)){
+        alert("Es correcto, ya sabes que lleva un/una: "+nombreBebida)
+        return true
+    }else{
+        alert("No has seleccionado bien tus ingredientes")
+        return false
+    }
+
+}
+
 function comenzarJuego(){
-let ingredientesCorrectos = false
+    let ingredientesCorrectos = false
 
     switch(nombreBebida){
         case "Margarita":
-        ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputTequila, inputTripleSec, inputJugoLimon, inputSal, inputHielo, inputRodajaLimon]);
+        ingredientesCorrectos = revisarIngredientes(nombreBebida);
         break;
 
         case "Martini":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputGinebra, inputVodka, inputVermutSeco, inputHielo, inputAceituna, inputCascaraLimon]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida);
             break;
 
         case "Mojito":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputRonBlanco, inputJarabeAzucar, inputJugoLima, inputAguaMineral, inputHojaMenta, inputHielo, inputRodajaLima]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida);
             break;
 
         case "Old Fashioned":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida,[inputWhiskyBourbon, inputAngosturaBitters, inputJarabeAzucar, inputTerronAzucar, inputCascaraNaranja, inputCereza]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida);
             break;
 
         case "Negroni":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputGinebra, inputVermutRojo, inputCampari, inputHielo, inputCascaraNaranja]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida);
             break;
             
         case "Piña Colada":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputRonBlanco, inputCremaCoco, inputJugoPina, inputHielo, inputRodajaPina, inputCereza]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida);
             break;
             
         case "Caipirinha":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputChaca, inputJarabeAzucar, inputHielo, inputJugoLimon]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida);
             break;
             
         case "Cosmopolitan":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputVodka, inputTripleSec, inputLicorArandano, inputJugoLimon, inputHielo, inputRodajaLimon, inputCascaraNaranja]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida);
             break;
 
         case "Whisky Sour":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputWhisky, inputJarabeAzucar, inputJugoLimon, inputClaraHuevo, inputHielo, inputRodajaNaranja, inputCereza]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida);
             break;
 
         case "Manhattan":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputWhisky, inputVermutDulce, inputAngosturaBitters, inputHielo, inputCereza]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida);
             break;
 
         case "Daiquiri":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputRonBlanco, inputJarabeAzucar, inputJugoLimon, inputHielo, inputRodajaLimon]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida);
             break;
 
         case "Mai Tai":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputRonOscuro, inputLicorAlmendra, inputLicorNaranja, inputRonBlanco, inputJugoLimon, inputHielo, inputRodajaPina, inputCereza]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida);
             break;
 
         case "Moscow Mule":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputVodka, inputJugoLima, inputAguaGengibre, inputHielo, inputRodajaLima]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida);
             break;
 
         case "Aperol Spritz":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputAperol, inputVinoEspumoso, inputAguaMineral, inputHielo, inputRodajaNaranja]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida);
             break;
 
         case "Tom Collins":
-            ingredientesCorrectos = revisarIngredientes(nombreBebida, [inputGinebra, inputJarabeAzucar, inputAguaMineral, inputJugoLimon, inputHielo, inputRodajaNaranja, inputCereza]);
+            ingredientesCorrectos = revisarIngredientes(nombreBebida);
             break;
 
         default:
@@ -750,7 +835,6 @@ let ingredientesCorrectos = false
         sectionMedidas.style.display = "flex"
         extraerInformacionMedidas(bebidaJuego)
     }
-
 }
 
 function extraerInformacionMedidas(bebidaJuego){
