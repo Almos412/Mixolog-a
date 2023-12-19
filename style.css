@@ -23,6 +23,7 @@ body{
     height: 31px;
     text-align: center;
     font-size: 25px;
+    border-radius: 15px;
 }
 
 .parrafo{
@@ -31,12 +32,13 @@ body{
     width: 1885px;
     height: 58px;
     overflow: hidden;
+    border-radius: 20px;
 }
 
 .parrafo::before{
     content: '';
     background: black center/cover no-repeat;
-    filter: blur(49px);
+    filter: blur(20px);
     position: absolute;
     top: 0;
     left: 0;
@@ -47,13 +49,13 @@ body{
 
 .p1{
     color: white;
-    font-family: cursive;
+    font-family: 'DM Sans', sans-serif;
     text-align: center;
 }
 
 .p2{
     color: white;
-    font-family: cursive;
+    font-family: 'DM Sans', sans-serif;
     text-align: center;
 }
 
@@ -65,7 +67,7 @@ body{
 
 #botonInformacion{
     color: white;
-    background-color: black;
+    background-color: #191919;
     border-width: thick;
     width: 215px;
     height: 100px;
@@ -76,7 +78,7 @@ body{
     justify-content: center;
     flex-direction: column;
     flex-wrap: nowrap;
-    font-family: cursive;
+    font-family: 'Noto Serif', serif;
     font-size: medium;
     margin-left: 0px;
     margin-top: 15px;
@@ -85,7 +87,7 @@ body{
 #botonJuego{
     color: white;
     width: 215px;
-    background-color: black;
+    background-color: #191919;
     border-width: thick;
     border-radius: 9px;
     display: flex;
@@ -94,7 +96,7 @@ body{
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    font-family: cursive;
+    font-family: 'Noto Serif', serif;
     font-size: medium;
     margin-left: 31px;
     margin-top: 15px; 
@@ -246,7 +248,7 @@ input:checked + label{
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    font-family: cursive;
+    font-family: 'Noto Serif', serif;
     font-size: medium;
     margin-left: 31px;
     margin-top: 15px; 
@@ -328,7 +330,7 @@ input:checked + label{
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    font-family: cursive;
+    font-family: 'Noto Serif', serif;
     font-size: medium;
     margin-left: 31px;
     margin-top: 15px; 
