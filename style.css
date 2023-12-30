@@ -2,368 +2,208 @@
     --white: #FFFFFF;
     --black: #000000;
     --dark: #232830;
+    --dark-2: #2B2B2B;
     --very-light-pink: #C7C7C7;
     --text-input-field: #F7F7F7;
-    --back-button-grey: #607274;
-    --hospital-green: #ACD9B2;
+    --background-1: #272626;
+    --background-2: #776B5D;
+    --brown:#C69B7B;
     --sm: 14px;
     --md: 16px;
     --lg: 18px;
+    --xlg: 24px;
 }
 
 body{
-    background-image: url(images/the-garret.jpeg);
-    background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	text-align: center;
     font-family:  'Quicksand', sans-serif;
+    background-color: var(--background-2);
 }
-
-.titulo1{
-    color: #a0814c;
-    background-color: black;
-    border-style: double;
-    border-radius: 10px;
-    height: 37px;
-    text-align: center;
-    font-size: 30px;
+/* PÁGINA DE INICIO */
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--very-light-pink);
+    margin-top: -17px;
 }
-
-.titulo2{
-    color: silver ;
-    background-color: black;
-    border-style: double;
-    height: 31px;
-    text-align: center;
-    font-size: 25px;
-    border-radius: 15px;
+.navbar-left{
+    display: flex;
 }
-
-.parrafo{
-    padding-bottom: 10px;
-    position: relative;
-    width: 1885px;
-    height: 58px;
-    overflow: hidden;
-    border-radius: 20px;
-}
-
-.parrafo::before{
-    content: '';
-    background: black center/cover no-repeat;
-    filter: blur(20px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
-
-.p1{
-    color: white;
-    font-family: 'DM Sans', sans-serif;
-    text-align: center;
-}
-
-.p2{
-    color: white;
-    text-align: center;
-}
-
-.botones, .primerTitulo, .segundaSeccion, .terceraSeccion, .parrafo{
+.logos{
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    align-items: center;
+}
+.logos p{
+    font-family:"Ropa Sans";
+    font-size: var(--xlg);
+    margin-right: 2px;
+    font-weight: 600;
+    color: var(--brown);
+}
+.logo-1{
+    height: 40px;
+    width: 40px;
+    position: relative;
+}
+.logo-2{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 200px;
+    top: 23px;
+}
+.links-introduction{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.links-introduction li a{
+    text-decoration: none;
+    color: var(--very-light-pink);
+    border: 1px solid var(--text-input-field);
+    border-radius: 4px;
+    font-size: var(--lg);
+}
+.links-introduction li a:hover{
+    color: var(--brown);
+    border:1px solid var(--brown);
+}
+.links-introduction li a:nth-child(1){
+    text-decoration: none;
+    margin-right: 8px;
+}
+.logo-Ig{
+    height: 25px;
+    width: 25px;
+    position: relative;
+}
+.logo-Fb{
+    height: 33px;
+    width: 33px;
+    position: absolute;
+    right: -23px;
+    top: 10px;
+}
+.navbar-right{
+    display: flex;
+}
+.navbar-right ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-right ul li:nth-child(1){
+    font-size: var(--md);
+    color: var(--very-light-pink);
+    margin-right: 8px;
 }
 
-#botonInformacion{
-    color: white;
-    background-color: var(--black);
-    border: none;
-    width: 215px;
+/* Sección Información de PÁGINA DE INICIO */
+.information-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 238px;
+    border-bottom: 1px solid var(--very-light-pink);
+    width: 75%;
+}
+.logo-section{
+    display: flex;
+}
+.logo-info-1{
     height: 100px;
-    border-radius: 9px;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    font-size: medium;
-    margin-left: 0px;
-    margin-top: 15px;
-    cursor: pointer;
-}
-
-#botonJuego{
-    color: white;
-    width: 215px;
-    background-color: var(--back-button-grey);
-    border-radius: 9px;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-size: medium;
-    margin-left: 31px;
-    margin-top: 15px; 
-    cursor: pointer;
-}
-
-.guia1, .juegoBebidas{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.bebidas{
-    display: flex;
-    gap: 10px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.tarjetasBebidas, .tarjetasBebidas2{
-    width: 159px;
-    height: 79px;
-    padding: 10px;
-    color: honeydew;
-    box-sizing: border-box;
-    margin: 10px;
-    border: 3px solid #7d3a08;
-    border-radius: 15px;
-    border-style: double;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    overflow: hidden;
+    width: 100px;
     position: relative;
-
 }
-
-.tarjetasBebidas::before{
-     content: '';
-    background: url(./images/bar2.jpeg) center/cover no-repeat;
-    background-size: cover;
-    filter: blur(1.5px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    border-radius: 15px;
-}
-
-.tarjetasBebidas2::before{
-    content: '';
-   background: url(./images/bar2.jpeg) center/cover no-repeat;
-   background-size: cover;
-   filter: blur(1.5px);
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   z-index: -1;
-   border-radius: 15px;
-}
-
-.tarjetasBebidas img{
-    width: 65px;
-    height: 65px;
-    padding-left: 5px;
-}
-
-.tarjetasBebidas2 img{
-    width: 65px;
-    height: 65px;
-    padding-left: 5px;
-}
-
-input{
-    display: none;
-}
-
-input:checked + label{
-    background: black;
-    color: white;
-    border: 3px solid silver;
-}
-
-.botonS{
-    padding-top: 25px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.info, .juegoBebidas2, .medidas1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.miImagen{
-    width: 200px;
-    height: 200px;
-}
-
-.infoCompleta::before{
-    content: '';
-    background: black center/cover no-repeat;
-    filter: blur(400px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
-
-.infoCompleta, .contenedorIngredientesPrincipal{
-    color: white;
-    
-    }
-    
-    
-.contenedorIngredientesPrincipal::before{
-    content: '';
-    background: black center/cover no-repeat;
-    filter: blur(1000px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
- }
-
-.boton2{
-    color: white;
-    width: 215px;
-    background-color: black;
-    border-width: thick;
-    border-radius: 9px;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-size: medium;
-    margin-left: 31px;
-    margin-top: 15px; 
-}
-
-.juegoReto{
-    gap: 30px;
-    display: flex;
-    align-content: center;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 25px;
-    flex-wrap: wrap;
-}
-
-.juegoReto2{
-    gap: 30px;
-    display: flex;
-    align-content: center;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 25px;
-    flex-wrap: wrap;
-}
-
-.alcoholes, .liquidos, .solidos{
-    color: white;
-    border: 3px solid darkgoldenrod;
-    border-radius: 30px;
-    background: #4B5D67;
+.logo-info-2{
     height: 50px;
-    width: 130px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column-reverse;
-}
-
-.titulo4{
-    border-style: double;
-    height: 31px;
-    text-align: center;
-    font-size: 25px;
-    width: 125px;
-    border-radius: 30px;
-    background: #323232;
-    color: #BBBBBB;
-
-}
-
-.añoSeleccionado2, .paisSeleccionado2{
-    color: white;
-}
-
-
-
-.fondo::before{
-    content: '';
-    background: black center/cover no-repeat;
-    filter: blur(400px);
+    width: 50px;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+    top: 134px;
+    right: 905px;
 }
-
-.boton3{
-    color: white;
-    width: 300px;
-    background-color: black;
-    border-width: thick;
-    border-radius: 9px;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-size: medium;
-    margin-left: 31px;
-    margin-top: 15px; 
+.information-section ul p{
+    font-size: var(--lg);
+    font-weight: 500;
+    color: var(--text-input-field);
 }
-
-.volumenes{
-    color: white;
-    border: 3px solid rgb(150, 121, 47);
-    font-size: small;
-    border-radius: 30px;
-    background: #4B5D67;
-    height: 60px;
-    width: 60px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column-reverse;
-}
-
-.ingredientesoz, .ingredientesgramos{
+.information-section ul{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
-    align-content: center;
 }
+.information-section ul li{
+    margin: 5px 0px;
+    list-style: none;
+    color: var(--text-input-field);
+}
+.information-section ul li a{
+    color: var(--text-input-field);
+    font-size: var(--sm);
+    font-weight: 200;
+}
+.information-section ul input{
+    margin-top: 10px;
+    height: 40px;
+    width: 25%;
+    font-family: "Ropa Sans";
+    font-size: var(--lg);
+    font-weight: 400;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 8px;
+    background-color: var(--very-light-pink);
+    color: var(--text-input-field);
+    cursor: pointer;
+}
+.information-section ul input:hover{
+    border: 1px solid var(--brown);
+    background-color: transparent;
+    color: var(--brown);
+}
+
+/* Opening Hours de PAGINA DE INICIO */
+.opening-hours{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 23px;
+}
+.schedule{
+    display: flex;
+}
+.opening-hours h1{
+    font-weight: 300;
+    color: var(--dark-2);
+}
+.schedule div{
+    margin: 0px 15px;
+    color: var(--dark-2);
+}
+.schedule div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--sm);
+    font-weight: 500;
+}
+.schedule div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--sm);
+    font-weight: 500;
+}
+.schedule div:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--sm);
+    font-weight: 500;
+}
+
 

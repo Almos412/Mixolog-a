@@ -1,8 +1,8 @@
 //PROYECTO NEW YORK PARA BARES 
 //CONSTANTES/SECCIONES
 const sectionIntroduccion = document.getElementById("introduccion")
-const botonInformacion = document.getElementById("botonInformacion")
-const botonJuego = document.getElementById("botonJuego")
+const botonInformacion = document.getElementById("linkDrinks")
+const botonJuego = document.getElementById("linkGame")
 //Sección Guía
 const sectionGuia = document.getElementById ("guia")
 const botonSeleccionar = document.getElementById("botonSeleccionar")
