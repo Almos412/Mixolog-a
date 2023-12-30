@@ -19,6 +19,11 @@ body{
     background-color: var(--background-2);
 }
 /* PÁGINA DE INICIO */
+#front-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 nav{
     display: flex;
     width: 100%;
@@ -107,7 +112,6 @@ nav{
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
-    margin-left: 238px;
     border-bottom: 1px solid var(--very-light-pink);
     width: 75%;
 }
@@ -118,13 +122,6 @@ nav{
     height: 100px;
     width: 100px;
     position: relative;
-}
-.logo-info-2{
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: 134px;
-    right: 905px;
 }
 .information-section ul p{
     font-size: var(--lg);
