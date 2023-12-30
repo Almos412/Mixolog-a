@@ -232,4 +232,40 @@ nav{
     margin: 0px 50px;
 }
 
+/* SECTION DRINKS MENU */
+#guia{
+    display: flex;
+}
+.drinks-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.drinks{
+    display: flex;
+    width: 75%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tarjetasBebidas{
+    display: flex;
+    align-items: center;
+    margin: 10px 8px;
+}
+.tarjetasBebidas p{
+    font-size: 20px;
+    color: var(--dark-2);
+    font-weight: 200;
+    font-family: "Ropa Sans";
+    margin-left: 5px;
+}
+input{
+    display: none;
+}
+.tarjetasBebidas img{
+height: 80px;
+width: 80px;
+border-radius: 8px;
+}
+
 

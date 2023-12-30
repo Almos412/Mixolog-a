@@ -342,8 +342,8 @@ function iniciarInputs(contenedor, drinks, nombreDeClase){
         opcionDeTragos =`
         <input  type="radio" id=${drink.id} name="pisto"/>
         <label class=${nombreDeClase}  for=${drink.id} >
+        <img src=${drink.foto}  alt=${drink.id}}>
             <p>${drink.nombre}</p>
-            <img src=${drink.foto}  alt=${drink.id}}>
         </label>
         `
         contenedor.innerHTML += opcionDeTragos
