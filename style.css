@@ -205,5 +205,30 @@ nav{
     font-size: var(--sm);
     font-weight: 500;
 }
+.drinks-pictures div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.drink-mojito, .drink-mezcal, .drink-whisky{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.drink-mojito:hover{
+    transform: scale(1.1);
+}
+.drink-mezcal:hover{
+    transform: scale(1.1);
+}
+.drink-whisky:hover{
+    transform: scale(1.1);
+}
+.drink-mezcal{
+    margin: 0px 50px;
+}
 
 
