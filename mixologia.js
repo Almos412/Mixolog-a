@@ -1,6 +1,6 @@
 //PROYECTO NEW YORK PARA BARES 
 //CONSTANTES/SECCIONES
-const sectionIntroduccion = document.getElementById("introduccion")
+const sectionIntroduccion = document.getElementById("front-page")
 const botonInformacion = document.getElementById("linkDrinks")
 const botonJuego = document.getElementById("linkGame")
 //Sección Guía
@@ -327,7 +327,7 @@ const cantidades =[
 tragos.push(Margarita, Martini, Mojito, OldFashioned, Negroni, PiñaColada, Caipirinha, Cosmopolitan, WhiskySour, Manhattan, Daiquiri, MaiTai, MoscowMule, AperolSpritz, TomCollins)
 
 function iniciarPagina(){
-sectionIntroduccion.style.display = "block"
+sectionIntroduccion.style.display = "flex"
 sectionGuia.style.display = "none"
 sectionInformacionBebidas.style.display = "none"
 sectionJuego.style.display="none"

@@ -26,7 +26,7 @@ body{
 }
 nav{
     display: flex;
-    width: 100%;
+    width: 95%;
     justify-content: space-between;
     border-bottom: 2px solid var(--very-light-pink);
     margin-top: -17px;
@@ -55,7 +55,7 @@ nav{
     position: absolute;
     height: 20px;
     width: 20px;
-    left: 200px;
+    left: 236px;
     top: 23px;
 }
 .links-introduction{
@@ -88,7 +88,7 @@ nav{
     height: 33px;
     width: 33px;
     position: absolute;
-    right: -23px;
+    right: 16px;
     top: 10px;
 }
 .navbar-right{
@@ -105,7 +105,11 @@ nav{
     color: var(--very-light-pink);
     margin-right: 8px;
 }
-
+@media (min-width:1513px){
+    .logo-2{
+        left: 247px;
+    }
+}
 /* Sección Información de PÁGINA DE INICIO */
 .information-section{
     display: flex;
