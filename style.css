@@ -295,6 +295,10 @@ border-radius: 8px;
     color: var(--very-light-pink);
     border-bottom: 1px solid var(--text-input-field);
 }
+/* DRINKS MENU button section  */
+.botonS{
+    border-bottom: 1px solid var(--very-light-pink);
+}
 .boton2{
     height: 50px;
     width: 250px;
@@ -313,6 +317,7 @@ border-radius: 8px;
     background-color: transparent;
     color: var(--brown);
 }
+/* DRINKS MENU Explanation section */
 .drinks-explanation{
     width: 50%;
     display: flex;
