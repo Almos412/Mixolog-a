@@ -509,8 +509,8 @@ function mostrarInformacionBebida(listaIngredientes){
     listaIngredientes.forEach((lista)=>{
         listaDesplegada=`
         <div id="descripcion" class="descripcion1">
-        ${lista.liquido ? `<p> Lleva ${lista.liquido} en una cantidad de ${lista.cantidad}</p>` : ''}
-        ${lista.solido ? `<p> Lleva ${lista.solido} en una cantidad de ${lista.cantidad}</p>` : ''}
+        ${lista.liquido ? `<p> We use ${lista.liquido} in a qunatity of ${lista.cantidad}</p>` : ''}
+        ${lista.solido ? `<p> We use ${lista.solido} in a quantity of ${lista.cantidad}</p>` : ''}
         </div>
         `
         sectionSeleccion.innerHTML += listaDesplegada

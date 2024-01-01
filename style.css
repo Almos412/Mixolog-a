@@ -304,6 +304,8 @@ border-radius: 8px;
 /* DRINKS MENU button section  */
 .botonS{
     border-bottom: 1px solid var(--very-light-pink);
+    display: flex;
+    flex-direction: row-reverse;
 }
 .boton2{
     height: 50px;
@@ -359,4 +361,126 @@ border-radius: 8px;
     transform: scale(1.1);
 }
 
+/* DRINK DESCRIPTION  */
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info h1{
+    font-weight: 800;
+    color: var(--dark-2);
+    font-family: "Ropa Sans";
+    border-bottom: 1px solid var(--very-light-pink);
+    width: 100%;
+    text-align: center;
+}
+.info-container .tituloBebida h2{
+    font-weight: 200;
+    font-size: var(--xlg);
+}
+.info-container .imagenSeleccionada img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.infoCompleta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.infoCompleta .bebidaSeleccionada{
+    text-align: center;
+}
+.infoCompleta .paisSeleccionado p{
+    font-weight: 300;
+}
+.infoCompleta .añoSeleccionado p{
+    font-weight: 300;
+}
+.infoCompleta .bebidaSeleccionada p{
+    font-weight: 300;
+    font-size: var(--md);
+}
 
+/* DRINKS TEST SECTION */
+.juegoBebidas{
+    display: flex;
+    flex-direction: column;
+}
+.drinks-test{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo2{
+    font-size: 25px;
+    font-weight: 200;
+    color: var(--dark-2);
+}
+.bebidas{
+    display: flex;
+    width: 75%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.bebidas input{
+    display: none;
+    transition: transform 0.3s ease-in-out;
+}
+.tarjetasBebidas2{
+    display: flex;
+    align-items: center;
+    margin: 10px 10px;
+    flex-direction: row-reverse;
+}
+.tarjetasBebidas2 p{
+    font-size: 20px;
+    color: var(--dark-2);
+    font-weight: 200;
+    font-family: "Ropa Sans";
+    margin-left: 5px;
+}
+.tarjetasBebidas2{
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.tarjetasBebidas2 p{
+    color: var(--dark-2);
+    font-family: "Ropa Sans";
+    font-size: var(--md);
+    font-weight: 400;
+    border-bottom: 1px solid var(--dark-2);
+    border-left: 1px solid var(--dark-2);
+    border-right: 1px solid var(--dark-2);
+    border-radius: 8px;
+    padding: 5px;
+}
+.tarjetasBebidas2 img{
+height: 80px;
+width: 80px;
+border-radius: 8px;
+}
+.tarjetasBebidas2:hover{
+    transform: scale(1.1);
+}
+.bebidas input:checked + label{
+    transform: scale(1.1);
+}
+.bebidas input:checked + .tarjetasBebidas2 p{
+    color: var(--very-light-pink);
+    border-bottom: 1px solid var(--text-input-field);
+    border-left: 1px solid var(--text-input-field);
+    border-right: 1px solid var(--text-input-field);
+}
+.drinks-test ul:nth-child(4){
+    display: flex;
+    flex-direction: row-reverse;
+}
