@@ -78,6 +78,7 @@ nav{
 .links-introduction li a:nth-child(1){
     text-decoration: none;
     margin-right: 8px;
+    padding: 1.5px;
 }
 .logo-Ig{
     height: 25px;
@@ -481,6 +482,31 @@ border-radius: 8px;
     border-right: 1px solid var(--text-input-field);
 }
 .drinks-test ul:nth-child(4){
+    width: 40%;
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.button-back{
+    margin-left: -15px;
+}
+/* DRINKS TEST 1 Pictures */
+.test-pictures{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+.test-pictures img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    margin: 10px 40px;
+}
+.test-pictures img:hover{
+    transform: scale(1.1);
 }
