@@ -27,8 +27,6 @@ const contenedorJuego2 = document.getElementById("contenedorJuego2")
 const contenedorJuego3 = document.getElementById("contenedorJuego3")
 const sectionTituloJuego = document.getElementById("tituloJuego")
 const sectionImagenJuego = document.getElementById("imagenJuego")
-const sectionPaisJuego = document.getElementById("paisJuego")
-const sectionAñoJuego = document.getElementById("añoJuego")
 const botonRegreso4 = document.getElementById("botonRegreso4")
 const botonJuego3 = document.getElementById("botonJuego3")
 let nombreBebida
@@ -656,8 +654,6 @@ function extraerInformacionJuego(bebidaJuego){
     }
     imprimirTitulo(nombreBebida, sectionTituloJuego)
     imprimirImagen(imagenBebida, sectionImagenJuego)
-    imprimirPais(paisOrigen, sectionPaisJuego)
-    imprimirAño(añoCreacion, sectionAñoJuego)
     console.log(imagenBebida)
     console.log(paisOrigen)
     console.log(añoCreacion)

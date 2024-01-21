@@ -510,3 +510,160 @@ border-radius: 8px;
 .test-pictures img:hover{
     transform: scale(1.1);
 }
+/* DRINKS TEST INGREDIENTS */
+#juego2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fondo h1{
+    border-bottom:1px solid var(--very-light-pink);
+}
+.miImagen{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 16px 16px;
+}
+.fondo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#ingredients{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#contenedorJuego{
+    display: flex;
+}
+#contenedorJuego2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#contenedorJuego3{
+    display: flex;
+}
+#contenedorJuego input{
+    display: none;
+}
+#contenedorJuego2 input{
+    display: none;
+}
+#contenedorJuego3 input{
+    display: none;
+}
+#contenedorJuego label{
+    margin: 0px 20px;
+    cursor: pointer;
+}
+#contenedorJuego label:hover{
+    transform: scale(1.1);
+}
+#contenedorJuego input:checked + label{
+    transform: scale(1.2);
+}
+#contenedorJuego input:checked + label p{
+    color: var(--very-light-pink);
+    border-bottom: 1px solid var(--text-input-field);
+    border-left: 1px solid var(--text-input-field);
+    border-right: 1px solid var(--text-input-field);
+}
+#contenedorJuego2 label{
+    margin: 0px 20px;
+    cursor: pointer;
+}
+#contenedorJuego2 label:hover{
+    transform: scale(1.1);
+}
+#contenedorJuego2 input:checked + label{
+    transform: scale(1.2);
+}
+#contenedorJuego2 input:checked + label p{
+    color: var(--very-light-pink);
+    border-bottom: 1px solid var(--text-input-field);
+    border-left: 1px solid var(--text-input-field);
+    border-right: 1px solid var(--text-input-field);
+}
+#contenedorJuego3 label{
+    margin: 0px 20px;
+    cursor: pointer;
+}
+#contenedorJuego3 label p{
+    display: flex;
+    align-items: center;
+}
+#contenedorJuego3 label:hover{
+    transform: scale(1.1);
+}
+#contenedorJuego3 input:checked + label{
+    transform: scale(1.2);
+}
+#contenedorJuego3 input:checked + label p{
+    color: var(--very-light-pink);
+    border-bottom: 1px solid var(--text-input-field);
+    border-left: 1px solid var(--text-input-field);
+    border-right: 1px solid var(--text-input-field);
+}
+#contenedorJuego p{
+    color: var(--dark-2);
+    font-family: "Ropa Sans";
+    font-size: var(--lg);
+    font-weight: 400;
+    border-bottom: 1px solid var(--dark-2);
+    border-left: 1px solid var(--dark-2);
+    border-right: 1px solid var(--dark-2);
+    border-radius: 8px;
+    padding: 5px;
+}
+#contenedorJuego p:hover{
+    color: var(--very-light-pink);
+    border-bottom: 1px solid var(--text-input-field);
+    border-left: 1px solid var(--text-input-field);
+    border-right: 1px solid var(--text-input-field);
+}
+#contenedorJuego2 p{
+    color: var(--dark-2);
+    font-family: "Ropa Sans";
+    font-size: var(--lg);
+    font-weight: 400;
+    border-bottom: 1px solid var(--dark-2);
+    border-left: 1px solid var(--dark-2);
+    border-right: 1px solid var(--dark-2);
+    border-radius: 8px;
+    padding: 5px;
+}
+#contenedorJuego2 p:hover{
+    color: var(--very-light-pink);
+    border-bottom: 1px solid var(--text-input-field);
+    border-left: 1px solid var(--text-input-field);
+    border-right: 1px solid var(--text-input-field);
+}
+#contenedorJuego3 p{
+    color: var(--dark-2);
+    font-family: "Ropa Sans";
+    font-size: var(--lg);
+    font-weight: 400;
+    border-bottom: 1px solid var(--dark-2);
+    border-left: 1px solid var(--dark-2);
+    border-right: 1px solid var(--dark-2);
+    border-radius: 8px;
+    padding: 5px;
+}
+#contenedorJuego3 p:hover{
+    color: var(--very-light-pink);
+    border-bottom: 1px solid var(--text-input-field);
+    border-left: 1px solid var(--text-input-field);
+    border-right: 1px solid var(--text-input-field);
+}
+.buttons{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+#botonRegreso4{
+    width: 300px;
+}
