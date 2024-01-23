@@ -263,7 +263,7 @@ const alcoholes = [
 
 const liquidos = [
     {nombre:"Triple sec", id:"label-triple", input:"TripleSec"},
-    {nombre:"Juego de limón", id:"label-jugo_limon", input:"JugoLimon"},
+    {nombre:"Jugo de limón", id:"label-jugo_limon", input:"JugoLimon"},
     {nombre:"Vermut seco", id:"label-vermut", input:"VermutSeco"},
     {nombre:"Jarabe de azucar", id:"label-jarabe_azucar", input:"JarabeAzucar"},
     {nombre:"Jugo de lima", id:"label-jugo_lima", input:"JugoLima"},
@@ -301,9 +301,9 @@ const volumenes =[
     {nombre:"1/2 oz", id:"label-1/2"},
     {nombre:"3/4 oz", id:"label-3/4"},
     {nombre:"1 oz", id:"label-1"},
-    {nombre:"1 1/2 oz", id:"label-11/2"},
+    {nombre:"1.5 oz", id:"label-11/2"},
     {nombre:"2 oz", id:"label-2"},
-    {nombre:"2 1/2 oz", id:"label-21/2"},
+    {nombre:"2.5 oz", id:"label-21/2"},
     {nombre:"3 oz", id:"label-3"},
     {nombre:"2-3 dashes", id:"label-dashes"},
     {nombre:"Al gusto", id:"label-algusto"}
@@ -869,7 +869,7 @@ function mostrarInformacionLiquidos(listaIngredientes, onzas, contenedor){
             let uniqueIdLiquido = `${lista.liquido}_liquido_${volumen.id}`
             listaDesplegada +=`
             <input type="radio" name="${lista.liquido}" value="${volumen.nombre}" id="${uniqueIdLiquido}">
-        <label class="volumenes" for="${uniqueIdLiquido}">${volumen.nombre}</label>
+            <label class="volumenes" for="${uniqueIdLiquido}">${volumen.nombre}</label>
             `
             idsLiquidosLocal.push(uniqueIdLiquido)
         })

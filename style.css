@@ -667,3 +667,46 @@ border-radius: 8px;
 #botonRegreso4{
     width: 300px;
 }
+/* QUANTITIES SECTION*/
+#medidas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedorIngredientesPrincipal ul:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedorIngredientesPrincipal ul:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.descripcion2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0px;
+}
+#contenedorIngredientes, #contenedorIngredientes2{
+    margin: 5px 0px;
+}
+.contenedorIngredientes ul{
+    display: flex;
+}
+.title_quantity{
+    margin-bottom: -25px;
+}
+#contenedorIngredientes label{
+    cursor: pointer;
+}
+#contenedorIngredientes2 label{
+    cursor: pointer;
+}
+.buttons_quantities{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
