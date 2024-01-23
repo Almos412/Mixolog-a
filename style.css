@@ -700,9 +700,13 @@ border-radius: 8px;
 }
 #contenedorIngredientes label{
     cursor: pointer;
+    margin: 0px 3px;
+    border-bottom:1px solid var(--very-light-pink) ;
 }
 #contenedorIngredientes2 label{
     cursor: pointer;
+    margin: 0px 3px;
+    border-bottom:1px solid var(--very-light-pink) ;
 }
 .buttons_quantities{
     display: flex;
