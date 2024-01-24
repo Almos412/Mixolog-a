@@ -701,16 +701,40 @@ border-radius: 8px;
 #contenedorIngredientes label{
     cursor: pointer;
     margin: 0px 3px;
-    border-bottom:1px solid var(--very-light-pink) ;
+    padding: 4px;
 }
 #contenedorIngredientes2 label{
     cursor: pointer;
     margin: 0px 3px;
-    border-bottom:1px solid var(--very-light-pink) ;
+    padding: 4px;
+}
+#contenedorIngredientes label:hover{
+color: var(--very-light-pink);
+}
+#contenedorIngredientes2 label:hover{
+ color: var(--very-light-pink);
 }
 .buttons_quantities{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row-reverse;
+}
+.contenedorIngredientesPrincipal input{
+    display: none;
+}
+.contenedorIngredientesPrincipal #contenedorIngredientes input:checked + label{
+    color: var(--very-light-pink);
+    border-bottom:1px solid var(--very-light-pink) ;
+    border-left: 1px solid var(--very-light-pink);
+    border-right: 1px solid var(--very-light-pink);
+    border-radius: 4px;
+}
+.contenedorIngredientesPrincipal #contenedorIngredientes2 input:checked + label{
+    color: var(--very-light-pink);
+    border: none;
+    border-bottom:1px solid var(--very-light-pink) ;
+    border-left: 1px solid var(--very-light-pink);
+    border-right: 1px solid var(--very-light-pink);
+    border-radius: 4px;
 }
