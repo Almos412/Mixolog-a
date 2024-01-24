@@ -1,357 +1,740 @@
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark: #232830;
+    --dark-2: #2B2B2B;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --background-1: #272626;
+    --background-2: #776B5D;
+    --brown:#C69B7B;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --xlg: 24px;
+}
+
 body{
-    background-image: url(images/the-garret.jpeg);
-    background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	text-align: center;
+    font-family:  'Quicksand', sans-serif;
+    background-color: var(--background-2);
 }
-
-.titulo1{
-    color: #a0814c;
-    background-color: black;
-    border-style: double;
-    border-radius: 10px;
-    height: 37px;
-    text-align: center;
-    font-size: 30px;
+/* PÁGINA DE INICIO */
+#front-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-.titulo2{
-    color: silver ;
-    background-color: black;
-    border-style: double;
-    height: 31px;
-    text-align: center;
-    font-size: 25px;
+nav{
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--very-light-pink);
+    margin-top: -17px;
 }
-
-.parrafo{
-    padding-bottom: 10px;
+.navbar-left{
+    display: flex;
+}
+.logos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logos p{
+    font-family:"Ropa Sans";
+    font-size: var(--xlg);
+    margin-right: 2px;
+    font-weight: 600;
+    color: var(--brown);
+}
+.logo-1{
+    height: 40px;
+    width: 40px;
     position: relative;
-    width: 1885px;
-    height: 58px;
-    overflow: hidden;
 }
-
-.parrafo::before{
-    content: '';
-    background: black center/cover no-repeat;
-    filter: blur(49px);
+.logo-2{
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+    height: 20px;
+    width: 20px;
+    left: 236px;
+    top: 23px;
+}
+.links-introduction{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.links-introduction li a{
+    text-decoration: none;
+    color: var(--very-light-pink);
+    border: 1px solid var(--text-input-field);
+    border-radius: 4px;
+    font-size: var(--lg);
+}
+.links-introduction li a:hover{
+    color: var(--brown);
+    border:1px solid var(--brown);
+}
+.links-introduction li a:nth-child(1){
+    text-decoration: none;
+    margin-right: 8px;
+    padding: 1.5px;
+}
+.logo-Ig{
+    height: 25px;
+    width: 25px;
+    position: relative;
+}
+.logo-Fb{
+    height: 33px;
+    width: 33px;
+    position: absolute;
+    right: 16px;
+    top: 10px;
+}
+.navbar-right{
+    display: flex;
+}
+.navbar-right ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-right ul li:nth-child(1){
+    font-size: var(--md);
+    color: var(--very-light-pink);
+    margin-right: 8px;
+}
+@media (min-width:1513px){
+    .logo-2{
+        left: 247px;
+    }
+}
+/* Sección Información de PÁGINA DE INICIO */
+.information-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    border-bottom: 1px solid var(--very-light-pink);
+    width: 75%;
+}
+.logo-section{
+    display: flex;
+}
+.logo-info-1{
+    height: 100px;
+    width: 100px;
+    position: relative;
+}
+.information-section ul p{
+    font-size: var(--lg);
+    font-weight: 500;
+    color: var(--text-input-field);
+}
+.information-section ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.information-section ul li{
+    margin: 5px 0px;
+    list-style: none;
+    color: var(--text-input-field);
+}
+.information-section ul li a{
+    color: var(--text-input-field);
+    font-size: var(--sm);
+    font-weight: 200;
+}
+.information-section ul input{
+    margin-top: 10px;
+    height: 40px;
+    width: 25%;
+    font-family: "Ropa Sans";
+    font-size: var(--lg);
+    font-weight: 400;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 8px;
+    background-color: var(--very-light-pink);
+    color: var(--text-input-field);
+    cursor: pointer;
+}
+.information-section ul input:hover{
+    border: 1px solid var(--brown);
+    background-color: transparent;
+    color: var(--brown);
 }
 
-.p1{
-    color: white;
-    font-family: cursive;
+/* Opening Hours de PAGINA DE INICIO */
+.opening-hours{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 23px;
+}
+.schedule{
+    display: flex;
+}
+.opening-hours h1{
+    font-weight: 300;
+    color: var(--dark-2);
+}
+.schedule div{
+    margin: 0px 15px;
+    color: var(--dark-2);
+}
+.schedule div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--sm);
+    font-weight: 500;
+}
+.schedule div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--sm);
+    font-weight: 500;
+}
+.schedule div:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--sm);
+    font-weight: 500;
+}
+.drinks-pictures div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.drink-mojito, .drink-mezcal, .drink-whisky{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.drink-mojito:hover{
+    transform: scale(1.1);
+}
+.drink-mezcal:hover{
+    transform: scale(1.1);
+}
+.drink-whisky:hover{
+    transform: scale(1.1);
+}
+.drink-mezcal{
+    margin: 0px 50px;
+}
+
+/* SECTION DRINKS MENU */
+#guia{
+    display: flex;
+}
+.drinks-title{
+    font-size: 40px;
+    font-weight: 200;
+    color: var(--dark-2);
+}
+.drinks-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.drinks{
+    display: flex;
+    width: 75%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tarjetasBebidas{
+    display: flex;
+    align-items: center;
+    margin: 10px 10px;
+}
+.tarjetasBebidas p{
+    font-size: 20px;
+    color: var(--dark-2);
+    font-weight: 200;
+    font-family: "Ropa Sans";
+    margin-left: 5px;
+}
+.drinks input{
+    display: none;
+    transition: transform 0.3s ease-in-out;
+}
+.tarjetasBebidas{
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.tarjetasBebidas p{
+    color: var(--dark-2);
+    font-family: "Ropa Sans";
+    font-size: var(--md);
+    font-weight: 400;
+    border-bottom: 1px solid var(--dark-2);
+    border-left: 1px solid var(--dark-2);
+    border-right: 1px solid var(--dark-2);
+    border-radius: 8px;
+    padding: 5px;
+}
+.tarjetasBebidas img{
+height: 80px;
+width: 80px;
+border-radius: 8px;
+}
+.tarjetasBebidas:hover{
+    transform: scale(1.1);
+}
+.drinks input:checked + label{
+    transform: scale(1.1);
+}
+.drinks input:checked + .tarjetasBebidas p{
+    color: var(--very-light-pink);
+    border-bottom: 1px solid var(--text-input-field);
+    border-left: 1px solid var(--text-input-field);
+    border-right: 1px solid var(--text-input-field);
+}
+/* DRINKS MENU button section  */
+.botonS{
+    border-bottom: 1px solid var(--very-light-pink);
+    display: flex;
+    flex-direction: row-reverse;
+}
+.boton2{
+    height: 50px;
+    width: 250px;
+    font-size: var(--md);
+    font-weight: 500;
+    color: var(--text-input-field);
+    border: 1px solid var(--very-light-pink);
+    border-radius: 8px;
+    background-color: var(--very-light-pink);
+    color: var(--text-input-field);    
+    cursor: pointer;
+    margin: 10px 20px;
+}
+.boton2:hover{
+    border: 1px solid var(--brown);
+    background-color: transparent;
+    color: var(--brown);
+}
+/* DRINKS MENU Explanation section */
+.drinks-explanation{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.drinks-explanation h1{
+    font-weight: 400;
+    color: var(--dark);
+    margin: 10px 0 -10px 0;
+}
+.drinks-explanation p{
     text-align: center;
+    font-weight: 300;
+    color: var(--dark-2);
 }
-
-.p2{
-    color: white;
-    font-family: cursive;
-    text-align: center;
-}
-
-.botones, .primerTitulo, .segundaSeccion, .terceraSeccion, .parrafo{
+.drinks-explanation ul{
     display: flex;
     justify-content: center;
     flex-direction: row;
-}
-
-#botonInformacion{
-    color: white;
-    background-color: black;
-    border-width: thick;
-    width: 215px;
-    height: 100px;
-    border-radius: 9px;
-    display: flex;
-    align-content: center;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    font-family: cursive;
-    font-size: medium;
-    margin-left: 0px;
-    margin-top: 15px;
+}
+.drinks-explanation ul img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    margin: 10px 40px;
+}
+.drinks-explanation ul img:hover{
+    transform: scale(1.1);
 }
 
-#botonJuego{
-    color: white;
-    width: 215px;
-    background-color: black;
-    border-width: thick;
-    border-radius: 9px;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-family: cursive;
-    font-size: medium;
-    margin-left: 31px;
-    margin-top: 15px; 
-}
-
-.guia1, .juegoBebidas{
+/* DRINK DESCRIPTION  */
+.info{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info h1{
+    font-weight: 800;
+    color: var(--dark-2);
+    font-family: "Ropa Sans";
+    border-bottom: 1px solid var(--very-light-pink);
+    width: 100%;
+    text-align: center;
+}
+.info-container .tituloBebida h2{
+    font-weight: 200;
+    font-size: var(--xlg);
+}
+.info-container .imagenSeleccionada img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.infoCompleta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.infoCompleta .bebidaSeleccionada{
+    text-align: center;
+}
+.infoCompleta .paisSeleccionado p{
+    font-weight: 300;
+}
+.infoCompleta .añoSeleccionado p{
+    font-weight: 300;
+}
+.infoCompleta .bebidaSeleccionada p{
+    font-weight: 300;
+    font-size: var(--md);
+}
 
+/* DRINKS TEST SECTION */
+.juegoBebidas{
+    display: flex;
+    flex-direction: column;
+}
+.drinks-test{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo2{
+    font-size: 25px;
+    font-weight: 200;
+    color: var(--dark-2);
+}
 .bebidas{
     display: flex;
-    gap: 10px;
-    flex-direction: row;
+    width: 75%;
     flex-wrap: wrap;
     justify-content: center;
 }
-
-.tarjetasBebidas, .tarjetasBebidas2{
-    width: 159px;
-    height: 79px;
-    padding: 10px;
-    color: honeydew;
+.bebidas input{
+    display: none;
+    transition: transform 0.3s ease-in-out;
+}
+.tarjetasBebidas2{
+    display: flex;
+    align-items: center;
+    margin: 10px 10px;
+    flex-direction: row-reverse;
+}
+.tarjetasBebidas2 p{
+    font-size: 20px;
+    color: var(--dark-2);
+    font-weight: 200;
+    font-family: "Ropa Sans";
+    margin-left: 5px;
+}
+.tarjetasBebidas2{
     box-sizing: border-box;
-    margin: 10px;
-    border: 3px solid #7d3a08;
-    border-radius: 15px;
-    border-style: double;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.tarjetasBebidas2 p{
+    color: var(--dark-2);
+    font-family: "Ropa Sans";
+    font-size: var(--md);
+    font-weight: 400;
+    border-bottom: 1px solid var(--dark-2);
+    border-left: 1px solid var(--dark-2);
+    border-right: 1px solid var(--dark-2);
+    border-radius: 8px;
+    padding: 5px;
+}
+.tarjetasBebidas2 img{
+height: 80px;
+width: 80px;
+border-radius: 8px;
+}
+.tarjetasBebidas2:hover{
+    transform: scale(1.1);
+}
+.bebidas input:checked + label{
+    transform: scale(1.1);
+}
+.bebidas input:checked + .tarjetasBebidas2 p{
+    color: var(--very-light-pink);
+    border-bottom: 1px solid var(--text-input-field);
+    border-left: 1px solid var(--text-input-field);
+    border-right: 1px solid var(--text-input-field);
+}
+.drinks-test ul:nth-child(4){
+    width: 40%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.button-back{
+    margin-left: -15px;
+}
+/* DRINKS TEST 1 Pictures */
+.test-pictures{
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: row;
-    overflow: hidden;
-    position: relative;
-
+    align-items: center;
 }
-
-.tarjetasBebidas::before{
-     content: '';
-    background: url(./images/bar2.jpeg) center/cover no-repeat;
-    background-size: cover;
-    filter: blur(1.5px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    border-radius: 15px;
+.test-pictures img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    margin: 10px 40px;
 }
-
-.tarjetasBebidas2::before{
-    content: '';
-   background: url(./images/bar2.jpeg) center/cover no-repeat;
-   background-size: cover;
-   filter: blur(1.5px);
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   z-index: -1;
-   border-radius: 15px;
+.test-pictures img:hover{
+    transform: scale(1.1);
 }
-
-.tarjetasBebidas img{
-    width: 65px;
-    height: 65px;
-    padding-left: 5px;
+/* DRINKS TEST INGREDIENTS */
+#juego2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-.tarjetasBebidas2 img{
-    width: 65px;
-    height: 65px;
-    padding-left: 5px;
+.fondo h1{
+    border-bottom:1px solid var(--very-light-pink);
 }
-
-input{
+.miImagen{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 16px 16px;
+}
+.fondo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#ingredients{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#contenedorJuego{
+    display: flex;
+}
+#contenedorJuego2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#contenedorJuego3{
+    display: flex;
+}
+#contenedorJuego input{
     display: none;
 }
-
-input:checked + label{
-    background: black;
-    color: white;
-    border: 3px solid silver;
+#contenedorJuego2 input{
+    display: none;
 }
-
-.botonS{
-    padding-top: 25px;
+#contenedorJuego3 input{
+    display: none;
+}
+#contenedorJuego label{
+    margin: 0px 20px;
+    cursor: pointer;
+}
+#contenedorJuego label:hover{
+    transform: scale(1.1);
+}
+#contenedorJuego input:checked + label{
+    transform: scale(1.2);
+}
+#contenedorJuego input:checked + label p{
+    color: var(--very-light-pink);
+    border-bottom: 1px solid var(--text-input-field);
+    border-left: 1px solid var(--text-input-field);
+    border-right: 1px solid var(--text-input-field);
+}
+#contenedorJuego2 label{
+    margin: 0px 20px;
+    cursor: pointer;
+}
+#contenedorJuego2 label:hover{
+    transform: scale(1.1);
+}
+#contenedorJuego2 input:checked + label{
+    transform: scale(1.2);
+}
+#contenedorJuego2 input:checked + label p{
+    color: var(--very-light-pink);
+    border-bottom: 1px solid var(--text-input-field);
+    border-left: 1px solid var(--text-input-field);
+    border-right: 1px solid var(--text-input-field);
+}
+#contenedorJuego3 label{
+    margin: 0px 20px;
+    cursor: pointer;
+}
+#contenedorJuego3 label p{
     display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
     align-items: center;
 }
-
-.info, .juegoBebidas2, .medidas1{
+#contenedorJuego3 label:hover{
+    transform: scale(1.1);
+}
+#contenedorJuego3 input:checked + label{
+    transform: scale(1.2);
+}
+#contenedorJuego3 input:checked + label p{
+    color: var(--very-light-pink);
+    border-bottom: 1px solid var(--text-input-field);
+    border-left: 1px solid var(--text-input-field);
+    border-right: 1px solid var(--text-input-field);
+}
+#contenedorJuego p{
+    color: var(--dark-2);
+    font-family: "Ropa Sans";
+    font-size: var(--lg);
+    font-weight: 400;
+    border-bottom: 1px solid var(--dark-2);
+    border-left: 1px solid var(--dark-2);
+    border-right: 1px solid var(--dark-2);
+    border-radius: 8px;
+    padding: 5px;
+}
+#contenedorJuego p:hover{
+    color: var(--very-light-pink);
+    border-bottom: 1px solid var(--text-input-field);
+    border-left: 1px solid var(--text-input-field);
+    border-right: 1px solid var(--text-input-field);
+}
+#contenedorJuego2 p{
+    color: var(--dark-2);
+    font-family: "Ropa Sans";
+    font-size: var(--lg);
+    font-weight: 400;
+    border-bottom: 1px solid var(--dark-2);
+    border-left: 1px solid var(--dark-2);
+    border-right: 1px solid var(--dark-2);
+    border-radius: 8px;
+    padding: 5px;
+}
+#contenedorJuego2 p:hover{
+    color: var(--very-light-pink);
+    border-bottom: 1px solid var(--text-input-field);
+    border-left: 1px solid var(--text-input-field);
+    border-right: 1px solid var(--text-input-field);
+}
+#contenedorJuego3 p{
+    color: var(--dark-2);
+    font-family: "Ropa Sans";
+    font-size: var(--lg);
+    font-weight: 400;
+    border-bottom: 1px solid var(--dark-2);
+    border-left: 1px solid var(--dark-2);
+    border-right: 1px solid var(--dark-2);
+    border-radius: 8px;
+    padding: 5px;
+}
+#contenedorJuego3 p:hover{
+    color: var(--very-light-pink);
+    border-bottom: 1px solid var(--text-input-field);
+    border-left: 1px solid var(--text-input-field);
+    border-right: 1px solid var(--text-input-field);
+}
+.buttons{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row-reverse;
     align-items: center;
 }
-
-.miImagen{
-    width: 200px;
-    height: 200px;
-}
-
-.infoCompleta::before{
-    content: '';
-    background: black center/cover no-repeat;
-    filter: blur(400px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
-
-.infoCompleta, .contenedorIngredientesPrincipal{
-    color: white;
-    
-    }
-    
-    
-.contenedorIngredientesPrincipal::before{
-    content: '';
-    background: black center/cover no-repeat;
-    filter: blur(1000px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
- }
-
-.boton2{
-    color: white;
-    width: 215px;
-    background-color: black;
-    border-width: thick;
-    border-radius: 9px;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-family: cursive;
-    font-size: medium;
-    margin-left: 31px;
-    margin-top: 15px; 
-}
-
-.juegoReto{
-    gap: 30px;
-    display: flex;
-    align-content: center;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 25px;
-    flex-wrap: wrap;
-}
-
-.juegoReto2{
-    gap: 30px;
-    display: flex;
-    align-content: center;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 25px;
-    flex-wrap: wrap;
-}
-
-.alcoholes, .liquidos, .solidos{
-    color: white;
-    border: 3px solid darkgoldenrod;
-    border-radius: 30px;
-    background: #4B5D67;
-    height: 50px;
-    width: 130px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column-reverse;
-}
-
-.titulo4{
-    border-style: double;
-    height: 31px;
-    text-align: center;
-    font-size: 25px;
-    width: 125px;
-    border-radius: 30px;
-    background: #323232;
-    color: #BBBBBB;
-
-}
-
-.añoSeleccionado2, .paisSeleccionado2{
-    color: white;
-}
-
-
-
-.fondo::before{
-    content: '';
-    background: black center/cover no-repeat;
-    filter: blur(400px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
-
-.boton3{
-    color: white;
+#botonRegreso4{
     width: 300px;
-    background-color: black;
-    border-width: thick;
-    border-radius: 9px;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-family: cursive;
-    font-size: medium;
-    margin-left: 31px;
-    margin-top: 15px; 
 }
-
-.volumenes{
-    color: white;
-    border: 3px solid rgb(150, 121, 47);
-    font-size: small;
-    border-radius: 30px;
-    background: #4B5D67;
-    height: 60px;
-    width: 60px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column-reverse;
-}
-
-.ingredientesoz, .ingredientesgramos{
+/* QUANTITIES SECTION*/
+#medidas{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
-    align-content: center;
 }
-
+.contenedorIngredientesPrincipal ul:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedorIngredientesPrincipal ul:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.descripcion2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0px;
+}
+#contenedorIngredientes, #contenedorIngredientes2{
+    margin: 5px 0px;
+}
+.contenedorIngredientes ul{
+    display: flex;
+}
+.title_quantity{
+    margin-bottom: -25px;
+}
+#contenedorIngredientes label{
+    cursor: pointer;
+    margin: 0px 3px;
+    padding: 4px;
+}
+#contenedorIngredientes2 label{
+    cursor: pointer;
+    margin: 0px 3px;
+    padding: 4px;
+}
+#contenedorIngredientes label:hover{
+color: var(--very-light-pink);
+}
+#contenedorIngredientes2 label:hover{
+ color: var(--very-light-pink);
+}
+.buttons_quantities{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+.contenedorIngredientesPrincipal input{
+    display: none;
+}
+.contenedorIngredientesPrincipal #contenedorIngredientes input:checked + label{
+    color: var(--very-light-pink);
+    border-bottom:1px solid var(--very-light-pink) ;
+    border-left: 1px solid var(--very-light-pink);
+    border-right: 1px solid var(--very-light-pink);
+    border-radius: 4px;
+}
+.contenedorIngredientesPrincipal #contenedorIngredientes2 input:checked + label{
+    color: var(--very-light-pink);
+    border: none;
+    border-bottom:1px solid var(--very-light-pink) ;
+    border-left: 1px solid var(--very-light-pink);
+    border-right: 1px solid var(--very-light-pink);
+    border-radius: 4px;
+}

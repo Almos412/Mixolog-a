@@ -1,8 +1,8 @@
 //PROYECTO NEW YORK PARA BARES 
 //CONSTANTES/SECCIONES
-const sectionIntroduccion = document.getElementById("introduccion")
-const botonInformacion = document.getElementById("botonInformacion")
-const botonJuego = document.getElementById("botonJuego")
+const sectionIntroduccion = document.getElementById("front-page")
+const botonInformacion = document.getElementById("linkDrinks")
+const botonJuego = document.getElementById("linkGame")
 //Sección Guía
 const sectionGuia = document.getElementById ("guia")
 const botonSeleccionar = document.getElementById("botonSeleccionar")
@@ -27,8 +27,6 @@ const contenedorJuego2 = document.getElementById("contenedorJuego2")
 const contenedorJuego3 = document.getElementById("contenedorJuego3")
 const sectionTituloJuego = document.getElementById("tituloJuego")
 const sectionImagenJuego = document.getElementById("imagenJuego")
-const sectionPaisJuego = document.getElementById("paisJuego")
-const sectionAñoJuego = document.getElementById("añoJuego")
 const botonRegreso4 = document.getElementById("botonRegreso4")
 const botonJuego3 = document.getElementById("botonJuego3")
 let nombreBebida
@@ -265,7 +263,7 @@ const alcoholes = [
 
 const liquidos = [
     {nombre:"Triple sec", id:"label-triple", input:"TripleSec"},
-    {nombre:"Juego de limón", id:"label-jugo_limon", input:"JugoLimon"},
+    {nombre:"Jugo de limón", id:"label-jugo_limon", input:"JugoLimon"},
     {nombre:"Vermut seco", id:"label-vermut", input:"VermutSeco"},
     {nombre:"Jarabe de azucar", id:"label-jarabe_azucar", input:"JarabeAzucar"},
     {nombre:"Jugo de lima", id:"label-jugo_lima", input:"JugoLima"},
@@ -303,9 +301,9 @@ const volumenes =[
     {nombre:"1/2 oz", id:"label-1/2"},
     {nombre:"3/4 oz", id:"label-3/4"},
     {nombre:"1 oz", id:"label-1"},
-    {nombre:"1 1/2 oz", id:"label-11/2"},
+    {nombre:"1.5 oz", id:"label-11/2"},
     {nombre:"2 oz", id:"label-2"},
-    {nombre:"2 1/2 oz", id:"label-21/2"},
+    {nombre:"2.5 oz", id:"label-21/2"},
     {nombre:"3 oz", id:"label-3"},
     {nombre:"2-3 dashes", id:"label-dashes"},
     {nombre:"Al gusto", id:"label-algusto"}
@@ -327,7 +325,7 @@ const cantidades =[
 tragos.push(Margarita, Martini, Mojito, OldFashioned, Negroni, PiñaColada, Caipirinha, Cosmopolitan, WhiskySour, Manhattan, Daiquiri, MaiTai, MoscowMule, AperolSpritz, TomCollins)
 
 function iniciarPagina(){
-sectionIntroduccion.style.display = "block"
+sectionIntroduccion.style.display = "flex"
 sectionGuia.style.display = "none"
 sectionInformacionBebidas.style.display = "none"
 sectionJuego.style.display="none"
@@ -342,8 +340,8 @@ function iniciarInputs(contenedor, drinks, nombreDeClase){
         opcionDeTragos =`
         <input  type="radio" id=${drink.id} name="pisto"/>
         <label class=${nombreDeClase}  for=${drink.id} >
+        <img src=${drink.foto}  alt=${drink.id}}>
             <p>${drink.nombre}</p>
-            <img src=${drink.foto}  alt=${drink.id}}>
         </label>
         `
         contenedor.innerHTML += opcionDeTragos
@@ -509,8 +507,8 @@ function mostrarInformacionBebida(listaIngredientes){
     listaIngredientes.forEach((lista)=>{
         listaDesplegada=`
         <div id="descripcion" class="descripcion1">
-        ${lista.liquido ? `<p> Lleva ${lista.liquido} en una cantidad de ${lista.cantidad}</p>` : ''}
-        ${lista.solido ? `<p> Lleva ${lista.solido} en una cantidad de ${lista.cantidad}</p>` : ''}
+        ${lista.liquido ? `<p> We use ${lista.liquido} in a qunatity of ${lista.cantidad}</p>` : ''}
+        ${lista.solido ? `<p> We use ${lista.solido} in a quantity of ${lista.cantidad}</p>` : ''}
         </div>
         `
         sectionSeleccion.innerHTML += listaDesplegada
@@ -656,8 +654,6 @@ function extraerInformacionJuego(bebidaJuego){
     }
     imprimirTitulo(nombreBebida, sectionTituloJuego)
     imprimirImagen(imagenBebida, sectionImagenJuego)
-    imprimirPais(paisOrigen, sectionPaisJuego)
-    imprimirAño(añoCreacion, sectionAñoJuego)
     console.log(imagenBebida)
     console.log(paisOrigen)
     console.log(añoCreacion)
@@ -873,7 +869,7 @@ function mostrarInformacionLiquidos(listaIngredientes, onzas, contenedor){
             let uniqueIdLiquido = `${lista.liquido}_liquido_${volumen.id}`
             listaDesplegada +=`
             <input type="radio" name="${lista.liquido}" value="${volumen.nombre}" id="${uniqueIdLiquido}">
-        <label class="volumenes" for="${uniqueIdLiquido}">${volumen.nombre}</label>
+            <label class="volumenes" for="${uniqueIdLiquido}">${volumen.nombre}</label>
             `
             idsLiquidosLocal.push(uniqueIdLiquido)
         })
