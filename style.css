@@ -232,7 +232,21 @@ nav{
 .drink-mezcal{
     margin: 0px 50px;
 }
-
+.drinks-pictures #employees-info{
+    display: flex;
+    margin-top: 20px;
+}
+#employees-info a{
+    color: var(--very-light-pink);
+    border: 1px solid var(--very-light-pink);
+    padding: 4px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+#employees-info a:hover{
+    color: var(--brown);
+    border: 1px solid var(--brown);
+}
 /* SECTION DRINKS MENU */
 #guia{
     display: flex;
@@ -274,6 +288,11 @@ nav{
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
+.tarjetasBebidas #parrafos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .tarjetasBebidas p{
     color: var(--dark-2);
     font-family: "Ropa Sans";
@@ -285,6 +304,10 @@ nav{
     border-radius: 8px;
     padding: 5px;
 }
+.tarjetasBebidas p:nth-child(2){
+    margin-top: -2px;
+}
+
 .tarjetasBebidas img{
 height: 80px;
 width: 80px;

@@ -48,6 +48,7 @@ let inputMaiTai2
 let inputMoscowMule2
 let inputAperolSpritz2
 let inputTomCollins2
+let inputCarajillo2
 
 //SECCION MEDIDAS
 const sectionMedidas = document.getElementById("medidas")
@@ -78,6 +79,7 @@ let inputMaiTai
 let inputMoscowMule
 let inputAperolSpritz
 let inputTomCollins
+let inputCarajillo
 
 
 
@@ -93,32 +95,34 @@ let solidosRandom
 
 
 class Bebidas{
-    constructor(id, id2, nombre, foto, pais, año){
+    constructor(id, id2, nombre, foto, pais, año, price){
         this.id = id
         this.id2 = id2
         this.nombre = nombre
         this.foto = foto
         this.pais = pais
         this.año = año
+        this.price = price
         this.ingredientes = []
     }
 }
 
-let Margarita = new Bebidas ("Margarita","Margarita2", "Margarita", "./images/margarita.jpeg", "Mexico 🇲🇽", 1930)
-let Martini = new Bebidas ("Martini", "Martini2", "Martini", "./images/martini.jpeg", "United States 🇺🇸", 1905)
-let Mojito = new Bebidas ("Mojito", "Mojito2", "Mojito", "./images/mojito.webp", "Cuba 🇨🇺", 1950)
-let OldFashioned = new Bebidas ("Old_Fashioned", "Old_Fashioned2", "Old Fashioned", "./images/old_fashioned.jpeg", "United States 🇺🇸", 1800)
-let Negroni = new Bebidas ("Negroni", "Negroni2", "Negroni", "./images/negroni.jpeg", "Italy 🇮🇹", 1919)
-let PiñaColada = new Bebidas ("Piña_Colada", "Piña_Colada2", "Piña Colada", "./images/piña_colada.webp", "Puerto Rico 🇵🇷", 1954)
-let Caipirinha = new Bebidas ("Caipirinha", "Caipirinha2", "Caipirinha", "./images/caipirinha.webp", "Brazil 🇧🇷", 1910)
-let Cosmopolitan = new Bebidas ("Cosmopolitan", "Cosmopolitan2", "Cosmopolitan", "./images/cosmopolitan.webp", "United States 🇺🇸", 1930)
-let WhiskySour = new Bebidas ("Whisky_Sour", "Whisky_Sour2", "Whisky Sour", "./images/whiskey_sour.jpeg", "United States 🇺🇸", 1800)
-let Manhattan = new Bebidas ("Manhattan", "Manhattan2", "Manhattan", "./images/manhattan.jpeg", "United States 🇺🇸", 1870)
-let Daiquiri = new Bebidas ("Daiquiri", "Daiquiri2", "Daiquiri", "./images/daiquiri.jpeg", "Cuba 🇨🇺", 1898)
-let MaiTai = new Bebidas ("Mai_Tai", "Mai_Tai2", "Mai Tai", "./images/mai_tai.jpeg", "United States 🇺🇸", 1940)
-let MoscowMule = new Bebidas ("Moscow_Mule", "Moscow_Mule2", "Moscow Mule", "./images/moscow_mule.jpeg", "United States 🇺🇸", 1941)
-let AperolSpritz = new Bebidas ("Aperol_Spritz", "Aperol_Spritz2", "Aperol Spritz", "./images/aperol.jpeg", "Italy 🇮🇹", 1919)
-let TomCollins = new Bebidas ("Tom_Collins", "Tom_Collins2", "Tom Collins", "./images/tom_collins.jpeg", "United States 🇺🇸", 1850)
+let Margarita = new Bebidas ("Margarita","Margarita2", "Margarita", "./images/margarita.jpeg", "Mexico 🇲🇽", 1930, 15)
+let Martini = new Bebidas ("Martini", "Martini2", "Martini", "./images/martini.jpeg", "United States 🇺🇸", 1905, 20)
+let Mojito = new Bebidas ("Mojito", "Mojito2", "Mojito", "./images/mojito.webp", "Cuba 🇨🇺", 1950, 18)
+let OldFashioned = new Bebidas ("Old_Fashioned", "Old_Fashioned2", "Old Fashioned", "./images/old_fashioned.jpeg", "United States 🇺🇸", 1800, 20)
+let Negroni = new Bebidas ("Negroni", "Negroni2", "Negroni", "./images/negroni.jpeg", "Italy 🇮🇹", 1919, 20)
+let PiñaColada = new Bebidas ("Piña_Colada", "Piña_Colada2", "Piña Colada", "./images/piña_colada.webp", "Puerto Rico 🇵🇷", 1954, 14)
+let Caipirinha = new Bebidas ("Caipirinha", "Caipirinha2", "Caipirinha", "./images/caipirinha.webp", "Brazil 🇧🇷", 1910, 14)
+let Cosmopolitan = new Bebidas ("Cosmopolitan", "Cosmopolitan2", "Cosmopolitan", "./images/cosmopolitan.webp", "United States 🇺🇸", 1930, 20)
+let WhiskySour = new Bebidas ("Whisky_Sour", "Whisky_Sour2", "Whisky Sour", "./images/whiskey_sour.jpeg", "United States 🇺🇸", 1800, 20)
+let Manhattan = new Bebidas ("Manhattan", "Manhattan2", "Manhattan", "./images/manhattan.jpeg", "United States 🇺🇸", 1870, 24)
+let Daiquiri = new Bebidas ("Daiquiri", "Daiquiri2", "Daiquiri", "./images/daiquiri.jpeg", "Cuba 🇨🇺", 1898, 24)
+let MaiTai = new Bebidas ("Mai_Tai", "Mai_Tai2", "Mai Tai", "./images/mai_tai.jpeg", "United States 🇺🇸", 1940, 22)
+let MoscowMule = new Bebidas ("Moscow_Mule", "Moscow_Mule2", "Moscow Mule", "./images/moscow_mule.jpeg", "United States 🇺🇸", 1941, 18)
+let AperolSpritz = new Bebidas ("Aperol_Spritz", "Aperol_Spritz2", "Aperol Spritz", "./images/aperol.jpeg", "Italy 🇮🇹", 1919, 15)
+let TomCollins = new Bebidas ("Tom_Collins", "Tom_Collins2", "Tom Collins", "./images/tom_collins.jpeg", "United States 🇺🇸", 1850, 20)
+let Carajillo = new Bebidas('Carajillo', 'Carajillo2', 'Carajillo', './images/carajillo.jpeg', 'Spain 🇪🇸', 1980, 22)
 
 Margarita.ingredientes.push(
     {liquido:"Tequila", cantidad:"2 oz"},
@@ -246,6 +250,12 @@ TomCollins.ingredientes.push(
     {solido:"Orange slice y cherry", cantidad:"1"},
 )
 
+Carajillo.ingredientes.push(
+    {liquido:'43 liquor', cantidad:'2 oz'},
+    {liquido:'Coffee', cantidad:'2 oz'},
+    {solido:'Ice', cantidad:'5 g'}
+)
+
 //LISTAS PARA EL JUEGO
 
 const alcoholes = [
@@ -259,6 +269,7 @@ const alcoholes = [
     {nombre:"Aperol", id:"label-aperol", input:"Aperol"},
     {nombre:"Prosecco", id:"label-vino", input:"VinoEspumoso"},
     {nombre:"Whisky", id:"label-whisky", input:"Whisky"},
+    {nombre:'43 Liquor', id:'label-43', input:'43Liquor'}
 ]
 
 const liquidos = [
@@ -278,6 +289,7 @@ const liquidos = [
     {nombre:"Sweet vermut", id:"label-vermut_dulce", input:"VermutDulce"},
     {nombre:"Orange liquor", id:"label-licor_naranja", input:"LicorNaranja"},
     {nombre:"Ginger beer", id:"label-agua_gengibre", input:"AguaGengibre"},
+    {nombre:'Coffee', id:'label-coffee', input:'Coffee'}
 ]
 
 const solidos =[
@@ -321,7 +333,7 @@ const cantidades =[
     {nombre:"5 g", id:"label-5g"}
 ]
 
-tragos.push(Margarita, Martini, Mojito, OldFashioned, Negroni, PiñaColada, Caipirinha, Cosmopolitan, WhiskySour, Manhattan, Daiquiri, MaiTai, MoscowMule, AperolSpritz, TomCollins)
+tragos.push(Margarita, Martini, Mojito, OldFashioned, Negroni, PiñaColada, Caipirinha, Cosmopolitan, WhiskySour, Manhattan, Daiquiri, MaiTai, MoscowMule, AperolSpritz, TomCollins, Carajillo)
 
 function iniciarPagina(){
 sectionIntroduccion.style.display = "flex"
@@ -340,7 +352,10 @@ function iniciarInputs(contenedor, drinks, nombreDeClase){
         <input  type="radio" id=${drink.id} name="pisto"/>
         <label class=${nombreDeClase}  for=${drink.id} >
         <img src=${drink.foto}  alt=${drink.id}}>
+        <div id="parrafos">
             <p>${drink.nombre}</p>
+            <p id="price">$${drink.price}</p>
+        </div>    
         </label>
         `
         contenedor.innerHTML += opcionDeTragos
@@ -403,6 +418,7 @@ function iniciarGuia(){
     inputMoscowMule = document.getElementById("Moscow_Mule")
     inputAperolSpritz = document.getElementById ("Aperol_Spritz")
     inputTomCollins = document.getElementById("Tom_Collins")
+    inputCarajillo = document.getElementById('Carajillo')
     botonSeleccionar.addEventListener("click", seleccionarBebida)
 }
 
@@ -427,6 +443,7 @@ function iniciarJuego(){
     inputMoscowMule2 = document.getElementById("Moscow_Mule2")
     inputAperolSpritz2 = document.getElementById ("Aperol_Spritz2")
     inputTomCollins2 = document.getElementById("Tom_Collins2")
+    inputCarajillo2 = document.getElementById('Carajillo2')
     botonJuego2.addEventListener("click", iniciarJuego2)
 }
 
@@ -462,6 +479,8 @@ function seleccionarBebida(){
         bebidaUsuario = inputAperolSpritz.id
     }else if(inputTomCollins.checked == true){
         bebidaUsuario = inputTomCollins.id
+    }else if(inputCarajillo.checked == true){
+        bebidaUsuario = inputCarajillo.id
     }else{
         alert("No seleccionaste ninguna bebida ")
         return
@@ -478,6 +497,7 @@ function extraerInformacion(bebidaUsuario){
     let añoCreacion
     let imagenBebida
     let nombreBebida
+    let precioBebida
     for (let i = 0; i < tragos.length; i++) {
         if(bebidaUsuario === tragos[i].id){
             listaIngredientes = tragos[i].ingredientes
@@ -485,6 +505,7 @@ function extraerInformacion(bebidaUsuario){
             añoCreacion = tragos[i].año
             imagenBebida = tragos[i].foto
             nombreBebida = tragos[i].nombre
+            precioBebida = tragos[i].price
             break;
         }
     }
@@ -625,6 +646,8 @@ function seleccionarBebidaJuego(){
         bebidaJuego = inputAperolSpritz2.id
     }else if(inputTomCollins2.checked == true){
         bebidaJuego = inputTomCollins2.id
+    }else if(inputCarajillo2.checked == true){
+        bebidaJuego = inputCarajillo2.id
     }else{
         alert("No seleccionaste ninguna bebida ")
         return
@@ -711,6 +734,8 @@ function ingredientesCorrectos3(nombreBebida) {
         case "Tom Collins":
             return [inputGinebra, inputJarabeAzucar, inputAguaMineral, inputJugoLimon, inputHielo, inputRodajaNaranja, inputCereza];
 
+        case 'Carajillo':
+            return [input43Liquor, inputCoffee, inputHielo];
         default:
             return [];
     }
@@ -818,6 +843,10 @@ function comenzarJuego(){
             break;
 
         case "Tom Collins":
+            ingredientesCorrectos = revisarIngredientes(nombreBebida);
+            break;
+
+        case 'Carajillo':
             ingredientesCorrectos = revisarIngredientes(nombreBebida);
             break;
 
@@ -992,10 +1021,13 @@ function juegoMedidas(){
         case "Tom Collins":
             ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido6, variableLiquido13, variableLiquido23, variableLiquido40, variableSolido10, variableSolido11]);
             break;
+            
+        case 'Carajillo':
+            ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido6, variableLiquido16, variableSolido10])
+            break;
 
         default:
             alert("No seleccionastes ninguna medida");
-
     }
     if(ingredientesCorrectos2){
         sectionJuego.style.display = "flex"
