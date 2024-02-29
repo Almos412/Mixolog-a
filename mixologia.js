@@ -104,196 +104,195 @@ class Bebidas{
     }
 }
 
-let Margarita = new Bebidas ("Margarita","Margarita2", "Margarita", "./images/margarita.jpeg", "México 🇲🇽", 1930)
-let Martini = new Bebidas ("Martini", "Martini2", "Martini", "./images/martini.jpeg", "Estados Unidos 🇺🇸", 1905)
+let Margarita = new Bebidas ("Margarita","Margarita2", "Margarita", "./images/margarita.jpeg", "Mexico 🇲🇽", 1930)
+let Martini = new Bebidas ("Martini", "Martini2", "Martini", "./images/martini.jpeg", "United States 🇺🇸", 1905)
 let Mojito = new Bebidas ("Mojito", "Mojito2", "Mojito", "./images/mojito.webp", "Cuba 🇨🇺", 1950)
-let OldFashioned = new Bebidas ("Old_Fashioned", "Old_Fashioned2", "Old Fashioned", "./images/old_fashioned.jpeg", "Estados Unidos 🇺🇸", 1800)
-let Negroni = new Bebidas ("Negroni", "Negroni2", "Negroni", "./images/negroni.jpeg", "Italia 🇮🇹", 1919)
+let OldFashioned = new Bebidas ("Old_Fashioned", "Old_Fashioned2", "Old Fashioned", "./images/old_fashioned.jpeg", "United States 🇺🇸", 1800)
+let Negroni = new Bebidas ("Negroni", "Negroni2", "Negroni", "./images/negroni.jpeg", "Italy 🇮🇹", 1919)
 let PiñaColada = new Bebidas ("Piña_Colada", "Piña_Colada2", "Piña Colada", "./images/piña_colada.webp", "Puerto Rico 🇵🇷", 1954)
-let Caipirinha = new Bebidas ("Caipirinha", "Caipirinha2", "Caipirinha", "./images/caipirinha.webp", "Brasil 🇧🇷", 1910)
-let Cosmopolitan = new Bebidas ("Cosmopolitan", "Cosmopolitan2", "Cosmopolitan", "./images/cosmopolitan.webp", "Estados Unidos 🇺🇸", 1930)
-let WhiskySour = new Bebidas ("Whisky_Sour", "Whisky_Sour2", "Whisky Sour", "./images/whiskey_sour.jpeg", "Estados Unidos 🇺🇸", 1800)
-let Manhattan = new Bebidas ("Manhattan", "Manhattan2", "Manhattan", "./images/manhattan.jpeg", "Estados Unidos 🇺🇸", 1870)
+let Caipirinha = new Bebidas ("Caipirinha", "Caipirinha2", "Caipirinha", "./images/caipirinha.webp", "Brazil 🇧🇷", 1910)
+let Cosmopolitan = new Bebidas ("Cosmopolitan", "Cosmopolitan2", "Cosmopolitan", "./images/cosmopolitan.webp", "United States 🇺🇸", 1930)
+let WhiskySour = new Bebidas ("Whisky_Sour", "Whisky_Sour2", "Whisky Sour", "./images/whiskey_sour.jpeg", "United States 🇺🇸", 1800)
+let Manhattan = new Bebidas ("Manhattan", "Manhattan2", "Manhattan", "./images/manhattan.jpeg", "United States 🇺🇸", 1870)
 let Daiquiri = new Bebidas ("Daiquiri", "Daiquiri2", "Daiquiri", "./images/daiquiri.jpeg", "Cuba 🇨🇺", 1898)
-let MaiTai = new Bebidas ("Mai_Tai", "Mai_Tai2", "Mai Tai", "./images/mai_tai.jpeg", "Estados Unidos 🇺🇸", 1940)
-let MoscowMule = new Bebidas ("Moscow_Mule", "Moscow_Mule2", "Moscow Mule", "./images/moscow_mule.jpeg", "Estados Unidos 🇺🇸", 1941)
-let AperolSpritz = new Bebidas ("Aperol_Spritz", "Aperol_Spritz2", "Aperol Spritz", "./images/aperol.jpeg", "Italia 🇮🇹", 1919)
-let TomCollins = new Bebidas ("Tom_Collins", "Tom_Collins2", "Tom Collins", "./images/tom_collins.jpeg", "Estados Unidos 🇺🇸", 1850)
+let MaiTai = new Bebidas ("Mai_Tai", "Mai_Tai2", "Mai Tai", "./images/mai_tai.jpeg", "United States 🇺🇸", 1940)
+let MoscowMule = new Bebidas ("Moscow_Mule", "Moscow_Mule2", "Moscow Mule", "./images/moscow_mule.jpeg", "United States 🇺🇸", 1941)
+let AperolSpritz = new Bebidas ("Aperol_Spritz", "Aperol_Spritz2", "Aperol Spritz", "./images/aperol.jpeg", "Italy 🇮🇹", 1919)
+let TomCollins = new Bebidas ("Tom_Collins", "Tom_Collins2", "Tom Collins", "./images/tom_collins.jpeg", "United States 🇺🇸", 1850)
 
 Margarita.ingredientes.push(
     {liquido:"Tequila", cantidad:"2 oz"},
     {liquido:"Triple sec", cantidad:"1 oz"},
-    {liquido:"Jugo de limón", cantidad:"1 oz"},
-    {solido:"Sal", cantidad:"1 g"},
-    {solido:"Hielo", cantidad:"5 g"},
-    {solido:"Rodaja de limón", cantidad:"1"},
+    {liquido:"lime juice", cantidad:"1 oz"},
+    {solido:"Salt", cantidad:"1 g"},
+    {solido:"Ice", cantidad:"5 g"},
+    {solido:"Lime slice", cantidad:"1"},
 )
 
 Martini.ingredientes.push(
-    {liquido:"Ginebra o Vodka", cantidad:"2 1/2 oz"},
-    {liquido:"Vermut seco", cantidad: "1/2 oz"},
-    {solido:"Hielo", cantidad:"5 g"},
-    {solido:"Aceituna o Cáscara de limón", cantidad:"1"},
+    {liquido:"Gin or Vodka", cantidad:"2 1/2 oz"},
+    {liquido:"Dry vermut", cantidad: "1/2 oz"},
+    {solido:"Ice", cantidad:"5 g"},
+    {solido:"Olives or lime slice", cantidad:"1"},
 )
 
 Mojito.ingredientes.push(
-    {liquido:"Ron blanco", cantidad:"2 oz"},
-    {liquido:"Jarabe de azucar", cantidad:"1 oz"},
-    {liquido:"Jugo de lima", cantidad:"1 oz"},
-    {liquido:"Agua mineral", cantidad:"1/4 oz"},
-    {solido:"Hoja de menta fresca", cantidad:"6-8"},
-    {solido:"Hielo", cantidad:"5 g"},
-    {solido:"Rodajas de lima", cantidad:"1"},
+    {liquido:"White Rum", cantidad:"2 oz"},
+    {liquido:"Syrup", cantidad:"1 oz"},
+    {liquido:"Lemon juice", cantidad:"1 oz"},
+    {liquido:"Sparkling water", cantidad:"1/4 oz"},
+    {solido:"Fresh mint", cantidad:"6-8"},
+    {solido:"Ice", cantidad:"5 g"},
+    {solido:"Lemon slice", cantidad:"1"},
 )
 
 OldFashioned.ingredientes.push(
     {liquido:"Whiskey bourbon", cantidad:"2 oz"},
     {liquido:"Angostura bitters", cantidad:"2-3 dashes"},
-    {liquido:"Jarabe de azucar", cantidad:"1/2 oz"},
-    {solido:"Azucar", cantidad:"1 terron"},
-    {solido:"Cáscara de naranja o cereza", cantidad:"1"},
+    {liquido:"Syrup", cantidad:"1/2 oz"},
+    {solido:"Sugar", cantidad:"1 terron"},
+    {solido:"Orange peel or cherry", cantidad:"1"},
 )
 
 Negroni.ingredientes.push(
-    {liquido:"Ginebra", cantidad:"1 oz"},
-    {liquido:"Vermut rojo", cantidad:"1 oz"},
+    {liquido:"Gin", cantidad:"1 oz"},
+    {liquido:"Red vermut", cantidad:"1 oz"},
     {liquido:"Campari", cantidad:"1 oz"},
-    {solido:"Hielo", cantidad:"5 g"},
-    {solido:"Cáscara de naranja", cantidad:"1"},
+    {solido:"Ice", cantidad:"5 g"},
+    {solido:"Orange peel", cantidad:"1"},
 )
 
 PiñaColada.ingredientes.push(
-    {liquido:"Ron blanco", cantidad:"2 oz"},
-    {liquido:"Crema de coco", cantidad:"3 oz"},
-    {liquido:"Jugo de piña", cantidad:"3 oz"},
-    {solido:"Hielo", cantidad:"5 g"},
-    {solido:"Rodaja de piña o cereza", cantidad:"1"},
+    {liquido:"White Rum", cantidad:"2 oz"},
+    {liquido:"Coconut cream", cantidad:"3 oz"},
+    {liquido:"Pinaple juice", cantidad:"3 oz"},
+    {solido:"Ice", cantidad:"5 g"},
+    {solido:"Pinaple slice or cherry", cantidad:"1"},
 )
 
 Caipirinha.ingredientes.push(
     {liquido:"Cachaca", cantidad:"2 oz"},
-    {solido:"Azucar", cantidad:"2 cucharadas"},
-    {solido:"Hielo", cantidad:"5 g"},
-    {solido:"Limón", cantidad:"1/2"},
+    {solido:"Sugar", cantidad:"2 cucharadas"},
+    {solido:"Ice", cantidad:"5 g"},
+    {solido:"Lime", cantidad:"1/2"},
 )
 
 Cosmopolitan.ingredientes.push(
     {liquido:"Vodka", cantidad:"1 1/2 oz"},
     {liquido:"Triple sec", cantidad:"1 oz"},
-    {liquido:"Licor de arándano", cantidad:"1/2 oz"},
-    {liquido:"Jugo de limón", cantidad:"1/2 oz"},
-    {solido:"Hielo", cantidad:"5 g"},
-    {solido:"Rodaja de limón o cáscara de naranja", cantidad:"1"},
+    {liquido:"Cranberry liquor", cantidad:"1/2 oz"},
+    {liquido:"lime juice", cantidad:"1/2 oz"},
+    {solido:"Ice", cantidad:"5 g"},
+    {solido:"Lime slice or orange peel", cantidad:"1"},
 )
 
 WhiskySour.ingredientes.push(
     {liquido:"Whisky", cantidad:"2 oz"},
-    {liquido:"Jarabe de azucar", cantidad:"3/4 oz"},
-    {liquido:"Jugo de limón", cantidad:"3/4 oz"},
-    {liquido:"Clara de huevo", cantidad:"1"},
-    {solido:"Hielo", cantidad:"5 g"},
-    {solido:"Rodaja de naranja o cereza", cantidad:"1"},
+    {liquido:"Syrup", cantidad:"3/4 oz"},
+    {liquido:"lime juice", cantidad:"3/4 oz"},
+    {liquido:"Egg white", cantidad:"1"},
+    {solido:"Ice", cantidad:"5 g"},
+    {solido:"Pinaple slice or cherry", cantidad:"1"},
 )
 
 Manhattan.ingredientes.push(
     {liquido:"Whisky", cantidad:"2 oz"},
-    {liquido:"Vermut dulce", cantidad:"1 oz"},
+    {liquido:"Sweet vermut", cantidad:"1 oz"},
     {liquido:"Angostura bitters", cantidad:"2-3 dashes"},
-    {solido:"Hielo", cantidad:"5 g"},
-    {solido:"Cereza", cantidad:"1"},
+    {solido:"Ice", cantidad:"5 g"},
+    {solido:"Cherry", cantidad:"1"},
 )
 
 Daiquiri.ingredientes.push(
-    {liquido:"Ron blanco", cantidad:"2 oz"},
-    {liquido:"Jarabe de azucar", cantidad:"3/4 oz"},
-    {liquido:"Jugo de limón", cantidad:"3/4 oz"},
-    {solido:"Hielo", cantidad:"5 g"},
-    {solido: "Rodaja de limón", cantidad:"1"}
+    {liquido:"White Rum", cantidad:"2 oz"},
+    {liquido:"Syrup", cantidad:"3/4 oz"},
+    {liquido:"lime juice", cantidad:"3/4 oz"},
+    {solido:"Ice", cantidad:"5 g"},
+    {solido: "Lime slice", cantidad:"1"}
 )
 
 MaiTai.ingredientes.push(
-    {liquido:"Ron oscuro", cantidad:"2 oz"},
-    {liquido:"Licor de almendra", cantidad:"3/4 oz"},
-    {liquido:"Licor de naranja", cantidad:"3/4 oz"},
-    {liquido:"Ron blanco", cantidad:"1 oz"},
-    {liquido:"Jugo de limón", cantidad:"1 oz"},
-    {solido:"Hielo", cantidad:"5 g"},
-    {solido:"Rodaja de piña o cereza", cantidad:"1"},
+    {liquido:"Dark rum", cantidad:"2 oz"},
+    {liquido:"Almond liquor", cantidad:"3/4 oz"},
+    {liquido:"Orange liquor", cantidad:"3/4 oz"},
+    {liquido:"White Rum", cantidad:"1 oz"},
+    {liquido:"lime juice", cantidad:"1 oz"},
+    {solido:"Ice", cantidad:"5 g"},
+    {solido:"Pinaple slice or cherry", cantidad:"1"},
 )
 
 MoscowMule.ingredientes.push(
     {liquido:"Vodka", cantidad:"2 oz"},
-    {liquido:"Jugo de lima", cantidad:"1 oz"},
-    {liquido:"Agua de gengibre", cantidad:"al gusto"},
-    {solido:"Hielo", cantidad:"5 g"},
-    {solido:"Rodaja de lima", cantidad:"1"},
+    {liquido:"Lemon juice", cantidad:"1 oz"},
+    {liquido:"Ginger beer", cantidad:"al gusto"},
+    {solido:"Ice", cantidad:"5 g"},
+    {solido:"Lemon slice", cantidad:"1"},
 )
 
 AperolSpritz.ingredientes.push(
     {liquido:"Aperol", cantidad:"3 oz"},
-    {liquido:"Vino espumoso (prosecco)", cantidad:"3 oz"},
-    {liquido:"Agua mineral", cantidad:"al gusto"},
-    {solido:"Hielo", cantidad:"5 g"},
-    {solido:"Rodaja de naranja", cantidad:"1"},
+    {liquido:"Prosecco", cantidad:"3 oz"},
+    {liquido:"Sparkling water", cantidad:"al gusto"},
+    {solido:"Ice", cantidad:"5 g"},
+    {solido:"Orange slice", cantidad:"1"},
 )
 
 TomCollins.ingredientes.push(
-    {liquido:"Ginebra", cantidad:"2 oz"},
-    {liquido:"Jarabe de azucar", cantidad:"3/4 oz"},
-    {liquido:"Jugo de limón", cantidad:"3/4 oz"},
-    {liquido:"Agua mineral", cantidad:"al gusto"},
-    {solido:"Hielo", cantidad:"5 g"},
-    {solido:"Rodaja de naranja y cereza", cantidad:"1"},
+    {liquido:"Gin", cantidad:"2 oz"},
+    {liquido:"Syrup", cantidad:"3/4 oz"},
+    {liquido:"lime juice", cantidad:"3/4 oz"},
+    {liquido:"Sparkling water", cantidad:"al gusto"},
+    {solido:"Ice", cantidad:"5 g"},
+    {solido:"Orange slice y cherry", cantidad:"1"},
 )
 
 //LISTAS PARA EL JUEGO
 
 const alcoholes = [
     {nombre:"Tequila", id:"label-tequila", input:"Tequila"},
-    {nombre:"Ginebra", id:"label-ginebra", input:"Ginebra"},
+    {nombre:"Gin", id:"label-ginebra", input:"Ginebra"},
     {nombre:"Vodka", id:"label-vodka", input:"Vodka"},
-    {nombre:"Ron Blanco", id:"label-ron_blanco", input:"RonBlanco"},
+    {nombre:"White Rum", id:"label-ron_blanco", input:"RonBlanco"},
     {nombre:"Whisky Bourbon", id:"label-whisky_bourbon", input:"WhiskyBourbon"},
     {nombre:"Cachaca", id:"label-cachaca", input:"Chaca"},
-    {nombre:"Ron Oscuro", id:"label-ron_oscuro", input:"RonOscuro"},
+    {nombre:"Dark rum", id:"label-ron_oscuro", input:"RonOscuro"},
     {nombre:"Aperol", id:"label-aperol", input:"Aperol"},
-    {nombre:"Vino espumoso", id:"label-vino", input:"VinoEspumoso"},
+    {nombre:"Prosecco", id:"label-vino", input:"VinoEspumoso"},
     {nombre:"Whisky", id:"label-whisky", input:"Whisky"},
 ]
 
 const liquidos = [
     {nombre:"Triple sec", id:"label-triple", input:"TripleSec"},
-    {nombre:"Jugo de limón", id:"label-jugo_limon", input:"JugoLimon"},
-    {nombre:"Vermut seco", id:"label-vermut", input:"VermutSeco"},
-    {nombre:"Jarabe de azucar", id:"label-jarabe_azucar", input:"JarabeAzucar"},
-    {nombre:"Jugo de lima", id:"label-jugo_lima", input:"JugoLima"},
-    {nombre:"Agua mineral", id:"label-agua_mineral", input:"AguaMineral"},
+    {nombre:"Lime juice", id:"label-jugo_limon", input:"JugoLimon"},
+    {nombre:"Dry vermut", id:"label-vermut", input:"VermutSeco"},
+    {nombre:"Syrup", id:"label-jarabe_azucar", input:"JarabeAzucar"},
+    {nombre:"Lemon juice", id:"label-jugo_lima", input:"JugoLima"},
+    {nombre:"Sparkling water", id:"label-agua_mineral", input:"AguaMineral"},
     {nombre:"Angostura bitters", id:"label-angostura_bitters", input:"AngosturaBitters"},
-    {nombre:"Vermut rojo", id:"label-vermut_rojo", input:"VermutRojo"},
+    {nombre:"Red vermut", id:"label-vermut_rojo", input:"VermutRojo"},
     {nombre:"Campari", id:"label-campari", input:"Campari"},
-    {nombre:"Crema de coco", id:"label-crema_coco", input:"CremaCoco"},
-    {nombre:"Jugo de piña", id:"label-jugo_pina", input:"JugoPina"},
-    {nombre:"Licor de arandano", id:"label-licor_arandano", input:"LicorArandano"},
-    {nombre:"Clara de huevo", id:"label-clara", input:"ClaraHuevo"},
-    {nombre:"Vermut dulce", id:"label-vermut_dulce", input:"VermutDulce"},
-    {nombre:"Licor de almendra", id:"label-licor_almendra", input:"LicorAlmendra"},
-    {nombre:"Licor de naranja", id:"label-licor_naranja", input:"LicorNaranja"},
-    {nombre:"Agua de gengibre", id:"label-agua_gengibre", input:"AguaGengibre"},
+    {nombre:"Coconut cream", id:"label-crema_coco", input:"CremaCoco"},
+    {nombre:"Pinaple juice", id:"label-jugo_pina", input:"JugoPina"},
+    {nombre:"Almond liquor", id:"label-licor_arandano", input:"LicorArandano"},
+    {nombre:"Egg white", id:"label-clara", input:"ClaraHuevo"},
+    {nombre:"Sweet vermut", id:"label-vermut_dulce", input:"VermutDulce"},
+    {nombre:"Orange liquor", id:"label-licor_naranja", input:"LicorNaranja"},
+    {nombre:"Ginger beer", id:"label-agua_gengibre", input:"AguaGengibre"},
 ]
 
 const solidos =[
-    {nombre:"Sal", id:"label-sal", input:"Sal"},
-    {nombre:"Rodaja de limón", id:"label-rodaja_limon", input:"RodajaLimon"},
-    {nombre:"Hielo", id:"label-hielo", input:"Hielo"},
-    {nombre:"Aceituna", id:"label-aceituna", input:"Aceituna"},
-    {nombre:"Hoja de menta fresca", id:"label-menta", input:"HojaMenta"},
-    {nombre:"Rodajas de lima", id:"label-rodaja_lima", input:"RodajaLima"},
-    {nombre:"Cereza", id:"label-cereza", input:"Cereza"},
-    {nombre:"Cáscara de naranja", id:"label-cascara_naranja", input:"CascaraNaranja"},
-    {nombre:"Rodaja de naranja", id:"label-rodaja_naranja", input:"RodajaNaranja"},
-    {nombre:"Rodaja de piña", id:"label-rodaja_pina", input:"RodajaPina"},
-    {nombre:"Cáscara de limón", id:"label-cascara_limon", input:"CascaraLimon"},
-    {nombre:"Terrón de azucar", id:"label-terron_azucar", input:"TerronAzucar"}
+    {nombre:"Salt", id:"label-sal", input:"Sal"},
+    {nombre:"Lime slice", id:"label-rodaja_limon", input:"RodajaLimon"},
+    {nombre:"Ice", id:"label-hielo", input:"Hielo"},
+    {nombre:"Olive", id:"label-aceituna", input:"Aceituna"},
+    {nombre:"Fresh mint", id:"label-menta", input:"HojaMenta"},
+    {nombre:"Lemon slice", id:"label-rodaja_lima", input:"RodajaLima"},
+    {nombre:"Cherry", id:"label-cereza", input:"Cereza"},
+    {nombre:"Orange peel", id:"label-cascara_naranja", input:"CascaraNaranja"},
+    {nombre:"Orange slice", id:"label-rodaja_naranja", input:"RodajaNaranja"},
+    {nombre:"Pinaple slice", id:"label-rodaja_pina", input:"RodajaPina"},
+    {nombre:"Lime peel", id:"label-cascara_limon", input:"CascaraLimon"},
+    {nombre:"Sugar cube", id:"label-terron_azucar", input:"TerronAzucar"}
 ]
 
 const volumenes =[
