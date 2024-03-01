@@ -222,3 +222,5 @@ carajilloInfo.info.push(
     {year: 2023, season: 'Autumn', price: 22, quantity: 7304},
     {year: 2023, season: 'Winter', price: 22, quantity: 4508},
 )
+
+drinksDataBase.push(margaritaInfo, martiniInfo, mojitoInfo, oldFashionInfo, negroniInfo, pinaColadaInfo, caipirinhaInfo, cosmopolitanInfo, whiskySourInfo, manhattanInfo, daiquiriInfo, maiTaiInfo, moscowMuleInfo, aperolSpritzInfo, tomCollinsInfo, carajilloInfo)

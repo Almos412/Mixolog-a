@@ -236,12 +236,23 @@ nav{
     display: flex;
     margin-top: 20px;
 }
-#employees-info a{
+#employees-info a:nth-child(1){
     color: var(--very-light-pink);
     border: 1px solid var(--very-light-pink);
     padding: 4px;
     border-radius: 8px;
     text-decoration: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#employees-info a:nth-child(2){
+    color: var(--very-light-pink);
+    border: 1px solid var(--very-light-pink);
+    padding: 4px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-left: 10px;
+    cursor: pointer;
 }
 #employees-info a:hover{
     color: var(--brown);

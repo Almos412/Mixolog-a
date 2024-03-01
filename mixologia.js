@@ -61,7 +61,12 @@ let idsSolidos = []
 const botonJuego4 = document.getElementById("botonJuego4")
 const botonRegreso5 = document.getElementById("botonRegreso5")
 
-
+//SECCION EMPLOYEES INFO
+const sectionEmployees = document.getElementById('Employees_Info')
+const sectionEmployeesLink = document.getElementById('employee_info')
+//SECCION DRINKS INFO
+const sectionDrinksInfo = document.getElementById('Drinks_Info')
+const sectionDrinksLink = document.getElementById('drinks-info')
 //IMPRIMIR BEBIDAS
 const contenedorBebidas = document.getElementById("contenedorBebidas")
 let inputMargarita
@@ -342,7 +347,8 @@ sectionInformacionBebidas.style.display = "none"
 sectionJuego.style.display="none"
 sectionJuego2.style.display="none"
 sectionMedidas.style.display="none"
-
+sectionEmployees.style.display='none'
+sectionDrinksInfo.style.display='none'
 }
 
 function iniciarInputs(contenedor, drinks, nombreDeClase){
@@ -384,7 +390,14 @@ function regresarAlJuego(){
     sectionJuego.style.display ="flex"
     sectionMedidas.style.display="none"
 }
-
+function getIntoEmployeesInfo(){
+    sectionIntroduccion.style.display = 'none'
+    sectionEmployees.style.display = 'flex'
+}
+function getIntoDrinksInfo(){
+    sectionIntroduccion.style.display = 'none'
+    sectionDrinksInfo.style.display = 'flex'
+}
 
 
 botonInformacion.addEventListener("click", iniciarGuia)
@@ -395,7 +408,8 @@ botonRegreso3.addEventListener("click", iniciarPagina)
 botonRegreso4.addEventListener("click", regresarAlJuego)
 botonJuego4.addEventListener("click", juegoMedidas)
 botonRegreso5.addEventListener("click", regresarAlJuego )
-
+sectionDrinksLink.addEventListener('click', getIntoDrinksInfo)
+sectionEmployeesLink.addEventListener('click', getIntoEmployeesInfo)
 
 function iniciarGuia(){
     sectionIntroduccion.style.display = "none"
@@ -1021,7 +1035,7 @@ function juegoMedidas(){
         case "Tom Collins":
             ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido6, variableLiquido13, variableLiquido23, variableLiquido40, variableSolido10, variableSolido11]);
             break;
-            
+
         case 'Carajillo':
             ingredientesCorrectos2 = revisarMedidas(nombreBebida, [variableLiquido6, variableLiquido16, variableSolido10])
             break;
