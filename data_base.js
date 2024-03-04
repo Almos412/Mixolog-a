@@ -23,29 +23,30 @@ employeesInfo.push(bartender, backBartender, waiter, runner, hostess, chef, back
 const drinksDataBase = []
 
 class drinksInfo{
-    constructor(name){
+    constructor(name, image){
         this.name = name
+        this.image = image
         this.info = []
     }
 
 }
 
-let margaritaInfo = new drinksInfo('Margarita')
-let martiniInfo = new drinksInfo('Martini')
-let mojitoInfo = new drinksInfo('Mojito')
-let oldFashionInfo = new drinksInfo('Old Fashioned')
-let negroniInfo = new drinksInfo('Negroni')
-let pinaColadaInfo = new drinksInfo('Piña Colada')
-let caipirinhaInfo = new drinksInfo('Caipirinha')
-let cosmopolitanInfo = new drinksInfo('Cosmopolitan')
-let whiskySourInfo = new drinksInfo('Whisky Sour')
-let manhattanInfo = new drinksInfo('Manhattan')
-let daiquiriInfo = new drinksInfo('Daiquiri')
-let maiTaiInfo = new drinksInfo('Mai Tai')
-let moscowMuleInfo = new drinksInfo('Moscow Mule')
-let aperolSpritzInfo = new drinksInfo('Aperol Spritz')
-let tomCollinsInfo = new drinksInfo('Tom Collins')
-let carajilloInfo = new drinksInfo('Carajillo')
+let margaritaInfo = new drinksInfo('Margarita', "./images/margarita.jpeg")
+let martiniInfo = new drinksInfo('Martini', "./images/martini.jpeg")
+let mojitoInfo = new drinksInfo('Mojito', "./images/mojito.webp")
+let oldFashionInfo = new drinksInfo('Old Fashioned', "./images/old_fashioned.jpeg")
+let negroniInfo = new drinksInfo('Negroni', "./images/negroni.jpeg")
+let pinaColadaInfo = new drinksInfo('Piña Colada', "./images/piña_colada.webp")
+let caipirinhaInfo = new drinksInfo('Caipirinha', "./images/caipirinha.webp")
+let cosmopolitanInfo = new drinksInfo('Cosmopolitan', "./images/cosmopolitan.webp")
+let whiskySourInfo = new drinksInfo('Whisky Sour', "./images/whiskey_sour.jpeg")
+let manhattanInfo = new drinksInfo('Manhattan', "./images/manhattan.jpeg")
+let daiquiriInfo = new drinksInfo('Daiquiri', "./images/daiquiri.jpeg")
+let maiTaiInfo = new drinksInfo('Mai Tai', "./images/mai_tai.jpeg")
+let moscowMuleInfo = new drinksInfo('Moscow Mule', "./images/moscow_mule.jpeg")
+let aperolSpritzInfo = new drinksInfo('Aperol Spritz', "./images/aperol.jpeg")
+let tomCollinsInfo = new drinksInfo('Tom Collins', "./images/tom_collins.jpeg")
+let carajilloInfo = new drinksInfo('Carajillo', './images/carajillo.jpeg')
 
 margaritaInfo.info.push(
     {year: 2022, season: 'Spring', price: 14, quantity: 5483},

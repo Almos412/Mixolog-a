@@ -65,7 +65,7 @@ const botonRegreso5 = document.getElementById("botonRegreso5")
 const sectionEmployees = document.getElementById('Employees_Info')
 const sectionEmployeesLink = document.getElementById('employee_info')
 //SECCION DRINKS INFO
-const sectionDrinksInfo = document.getElementById('Drinks_Info')
+const sectionDrinksInfo = document.getElementById('Drinks_Data')
 const sectionDrinksLink = document.getElementById('drinks-info')
 //IMPRIMIR BEBIDAS
 const contenedorBebidas = document.getElementById("contenedorBebidas")

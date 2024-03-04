@@ -1,3 +1,17 @@
+// INPUTS
+const inputDrink = document.getElementById('data-drink')
+const inputYear = document.getElementById('data-year')
+const inputSeason = document.getElementById('data-season')
+
+// BUTTONS
+const buttonSpecificDrink = document.getElementById('individual_average_drink')
+const buttonSpecificDrinkAndYear = document.getElementById('individual_average_drink_year')
+const buttonSpecificDrinkAndSeason = document.getElementById('individual_average_drink_season')
+const buttonAverageAllDrinks = document.getElementById('whole_average_drinks')
+const buttonAverageAllDrinksPerYear = document.getElementById('whole_average_drinks_year')
+const buttonAverageAllDrinksPerSeason = document.getElementById('whole_average_drinks_season')
+const buttonAverage4Seasons = document.getElementById('whole_average_seasons')
+
 let seasonObject = {}
 
 for(drink of drinksDataBase){
