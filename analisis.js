@@ -1,3 +1,35 @@
+let seasonObject = {}
+
+for(drink of drinksDataBase){
+    if(!seasonObject[drink.name]){
+        seasonObject[drink.name] = {}
+    }
+    for(info of drink.info){
+        if(!seasonObject[drink.name][info.season]){
+            seasonObject[drink.name][info.season] = []
+        }
+        seasonObject[drink.name][info.season].push(info.quantity)
+    }
+}
+console.log(seasonObject)
+
+let seasonSummary = {
+    Spring:[],
+    Summer:[],
+    Autumn:[],
+    Winter:[]
+}
+
+for (let i = 0; i < drinksDataBase.length; i++) {
+    for (let e = 0; e < drinksDataBase[i].info.length; e++) {
+        const season = drinksDataBase[i].info[e].season
+        const quantity = drinksDataBase[i].info[e].quantity
+        seasonSummary[season].push(quantity) 
+    }
+    
+}
+console.log(seasonSummary)
+
 function findDrink(name){
     const nameInput = name.split(' ')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
@@ -117,21 +149,6 @@ function getAverageAllDrinksPerYear(year){
     return sortListAscendingBidimensional(listArray, 1)
 }
 
-let seasonObject = {}
-
-for(drink of drinksDataBase){
-    if(!seasonObject[drink.name]){
-        seasonObject[drink.name] = {}
-    }
-    for(info of drink.info){
-        if(!seasonObject[drink.name][info.season]){
-            seasonObject[drink.name][info.season] = []
-        }
-        seasonObject[drink.name][info.season].push(info.quantity)
-    }
-}
-console.log(seasonObject)
-
 function getAverageAllDrinksPerSeason(season){
     let sumQuantity = 0
     let inputseason = season.charAt(0).toUpperCase() + season.slice(1).toLowerCase()
@@ -148,18 +165,27 @@ function getAverageAllDrinksPerSeason(season){
                 count++
             }
         }    
-        average = sumQuantity/count
+        average = Math.round(sumQuantity/count)
 
         if(!infoDrinks[drinksDataBase[i].name]){
             infoDrinks[drinksDataBase[i].name] = {}
         }    
 
-       infoDrinks[drinksDataBase[i].name][inputseason] = average  
+       infoDrinks[drinksDataBase[i].name][inputseason] = average 
+       console.log(`The average of ${drinksDataBase[i].name} that were sold in the ${inputseason} was of ${average}`)
     }
-
     return infoDrinks
-
-
 }
 
+function getAveragePerSeason(){
+    let sumQuantity = 0 
+    let infoSeason = {}
+    let keys = Object.keys(seasonSummary)
 
+    keys.forEach(season =>{
+        sumQuantity = seasonSummary[season].reduce((acc, current) => acc + current, 0)
+        const average = Math.round(sumQuantity/seasonSummary[season].length)
+        infoSeason[season] = average
+    })
+    return infoSeason
+}
