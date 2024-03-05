@@ -841,11 +841,11 @@ color: var(--very-light-pink);
     width: 25px;
     position: relative;
 }
-.logo-Fb{
+.logo-Fb2{
     height: 33px;
     width: 33px;
     position: absolute;
-    right: 20px;
+    right: 14px;
     top: 10px;
 }
 .navbar-right-2{
@@ -933,7 +933,7 @@ color: var(--very-light-pink);
     padding: 4px;
 }
 .data-inputs ul li input::placeholder{
-    color: var(--brown);
+    color: var(--very-light-pink);
     text-align: center;
     font-size: var(--lg);
     font-weight: 100;
@@ -965,4 +965,67 @@ color: var(--very-light-pink);
     border: 1px solid var(--brown);
     background-color: transparent;
     color: var(--brown);
+}
+/* AVERAGE FOR SPECIFIC DRINK, DRINK & YEAR, DRINK & SEASON */
+
+#tittle_results{
+    color: var(--very-light-pink);
+    font-size: var(--lg);
+    font-weight: 100;
+    border-bottom: 1px solid var(--very-light-pink);
+    text-align: center;
+    margin-top: 40px;
+}
+#results{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#result2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#results p{
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    font-weight: 300;
+    margin-right: 10px;
+}
+#results span{
+    color: var(--brown);
+}
+#results img{
+    height: 80px;
+    width: 80px;
+    border-radius: 8px;
+}
+
+/* AVERAGE ALL DRINKS */
+#results_All{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    grid-row-gap: 2px;
+}
+#results_All div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#results_All p{
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    font-weight: 300;
+    margin-right: 10px;
+}
+#results_All span{
+    color: var(--brown);
+}
+#results_All img{
+    height: 80px;
+    width: 80px;
+    border-radius: 8px;
 }

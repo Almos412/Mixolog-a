@@ -201,7 +201,7 @@ WhiskySour.ingredientes.push(
     {liquido:"lime juice", cantidad:"3/4 oz"},
     {liquido:"Egg white", cantidad:"1"},
     {solido:"Ice", cantidad:"5 g"},
-    {solido:"Pinaple slice or cherry", cantidad:"1"},
+    {solido:"Orange slice or cherry", cantidad:"1"},
 )
 
 Manhattan.ingredientes.push(
