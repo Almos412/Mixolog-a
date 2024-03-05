@@ -995,6 +995,7 @@ color: var(--very-light-pink);
 }
 #results span{
     color: var(--brown);
+    font-weight: 500;
 }
 #results img{
     height: 80px;
@@ -1023,6 +1024,7 @@ color: var(--very-light-pink);
 }
 #results_All span{
     color: var(--brown);
+    font-weight: 500;
 }
 #results_All img{
     height: 80px;

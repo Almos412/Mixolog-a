@@ -53,6 +53,8 @@ buttonSpecificDrink.addEventListener('click', getAveragePerDrink)
 buttonSpecificDrinkAndYear.addEventListener('click', getAveragePerYear)
 buttonSpecificDrinkAndSeason.addEventListener('click', getAveragePerSeason)
 buttonAverageAllDrinks.addEventListener('click', getAverageAllDrinks)
+buttonAverageAllDrinksPerYear.addEventListener('click', getAverageAllDrinksPerYear)
+buttonAverageAllDrinksPerSeason.addEventListener('click', getAverageAllDrinksPerSeason)
 
 function findDrink(){
     const nameInput = inputDrink.value.split(' ')
@@ -205,15 +207,19 @@ function getAverageAllDrinks(){
     });
 }
 
-function getAverageAllDrinksPerYear(year){
+function getAverageAllDrinksPerYear(){
     let sumQuantity = 0 
     let average = 0
     let infoDrinks = {}
+    let array = []
+    resultsAll.innerHTML = ' '
+    resultsDiv.innerHTML = ' '
+    if(inputYear.value == 2022 || inputYear.value == 2023){
     for (let i = 0; i < drinksDataBase.length; i++) {
         sumQuantity = 0
         let count = 0
        for (let e = 0; e < drinksDataBase[i].info.length; e++) {
-        if(drinksDataBase[i].info[e].year === year){
+        if(drinksDataBase[i].info[e].year == inputYear.value){
         sumQuantity += drinksDataBase[i].info[e].quantity
         count++
         }
@@ -221,44 +227,74 @@ function getAverageAllDrinksPerYear(year){
        console.log(drinksDataBase[i].name, sumQuantity, count)
        average = Math.round(sumQuantity/count)
 
-       if (!infoDrinks[year]){
-        infoDrinks[year] = {}
+       infoDrinks[drinksDataBase[i].name] = {
+        average: average,
+        image: drinksDataBase[i].image,
+        year:  inputYear.value
        }
-
-       infoDrinks[year][drinksDataBase[i].name] = average 
     }
     console.log(infoDrinks)
-    const listArray = Object.entries(infoDrinks[year])
+    const listArray = Object.entries(infoDrinks)
     console.log(listArray)
-    return sortListAscendingBidimensional(listArray, 1)
+     array = sortListAscendingBidimensional2(listArray, 1)
+     array.forEach((drink, index) => {
+        dataPrinted=`
+        <div id='result2'>
+            <p class='average_all'>${index + 1}- The average of <span>${drink[0]}s</span> sold in the year <span>${drink[1].year}</span> is <span>${drink[1].average}</span>.<p>
+            <img src=${drink[1].image} alt='${drink[0]}_image' id='${drink[0]}_id'>
+        </div>    
+        `
+        resultsAll.innerHTML += dataPrinted
+    });
+}else{
+    dataPrinted = `
+    <p class='result_paragraph'> This year doesn't exist in our data base, please check the information you typed.</p>`
+    resultsDiv.innerHTML = dataPrinted
 }
-
-function getAverageAllDrinksPerSeason(season){
+}
+function getAverageAllDrinksPerSeason(){
+    resultsAll.innerHTML = ''
+    resultsDiv.innerHTML = ''
     let sumQuantity = 0
-    let inputseason = season.charAt(0).toUpperCase() + season.slice(1).toLowerCase()
+    let inputseason1 = inputSeason.value.charAt(0).toUpperCase() + inputSeason.value.slice(1).toLowerCase()
     let infoDrinks = {}
+    let array = []
     let count = 0
     let average = 0
-
+    if(inputseason1 == 'Spring' || inputseason1 == 'Summer' || inputseason1 == 'Autumn' || inputseason1 == 'Winter'){
     for (let i = 0; i < drinksDataBase.length; i++) {
         sumQuantity = 0
         count = 0
         for (let e = 0; e < drinksDataBase[i].info.length; e++) {
-            if(drinksDataBase[i].info[e].season === inputseason){
+            if(drinksDataBase[i].info[e].season == inputseason1){
                 sumQuantity += drinksDataBase[i].info[e].quantity
                 count++
             }
         }    
-        average = Math.round(sumQuantity/count)
+        average = Math.round(sumQuantity/count)  
 
-        if(!infoDrinks[drinksDataBase[i].name]){
-            infoDrinks[drinksDataBase[i].name] = {}
-        }    
-
-       infoDrinks[drinksDataBase[i].name][inputseason] = average 
-       console.log(`The average of ${drinksDataBase[i].name} that were sold in the ${inputseason} was of ${average}`)
+       infoDrinks[drinksDataBase[i].name]= {
+        average: average,
+        season: inputseason1,
+        image: drinksDataBase[i].image    
+    } 
     }
-    return infoDrinks
+    const listaArray = Object.entries(infoDrinks)
+    array = sortListAscendingBidimensional2(listaArray, 1)
+    array.forEach((drink, index) =>{
+        dataPrinted=`
+        <div id='result2'>
+            <p class='average_all'>${index + 1}- The average of <span>${drink[0]}s</span> sold in the season <span>${drink[1].season}</span> the past two years is <span>${drink[1].average}</span>.<p>
+            <img src=${drink[1].image} alt='${drink[0]}_image' id='${drink[0]}_id'>
+        </div>    
+        `
+        resultsAll.innerHTML += dataPrinted
+    })
+}else{
+    dataPrinted = `
+    <p class='result_paragraph'> This season doesn't exist in our data base, please check the information you typed.</p>`
+    resultsDiv.innerHTML = dataPrinted
+}
 }
 
 function getAveragePerSeason2(){
