@@ -12,6 +12,9 @@ const buttonAverageAllDrinksPerYear = document.getElementById('whole_average_dri
 const buttonAverageAllDrinksPerSeason = document.getElementById('whole_average_drinks_season')
 const buttonAverage4Seasons = document.getElementById('whole_average_seasons')
 
+//LINK BACK TO MAIN PAGE
+const mainPage = document.getElementById('link_Main_Page')
+
 // RESULTS DIV
 const resultsDiv = document.getElementById('results')
 const resultsAll = document.getElementById('results_All')
@@ -49,12 +52,26 @@ for (let i = 0; i < drinksDataBase.length; i++) {
 }
 console.log(seasonSummary)
 
+mainPage.addEventListener('click', iniciarPagina2)
 buttonSpecificDrink.addEventListener('click', getAveragePerDrink)
 buttonSpecificDrinkAndYear.addEventListener('click', getAveragePerYear)
 buttonSpecificDrinkAndSeason.addEventListener('click', getAveragePerSeason)
 buttonAverageAllDrinks.addEventListener('click', getAverageAllDrinks)
 buttonAverageAllDrinksPerYear.addEventListener('click', getAverageAllDrinksPerYear)
 buttonAverageAllDrinksPerSeason.addEventListener('click', getAverageAllDrinksPerSeason)
+
+function iniciarPagina2(){
+    sectionIntroduccion.style.display = "flex"
+    sectionGuia.style.display = "none"
+    sectionInformacionBebidas.style.display = "none"
+    sectionJuego.style.display="none"
+    sectionJuego2.style.display="none"
+    sectionMedidas.style.display="none"
+    sectionEmployees.style.display='none'
+    sectionDrinksInfo.style.display='none'
+    resultsAll.innerHTML = ''
+    resultsDiv.innerHTML = ''
+}
 
 function findDrink(){
     const nameInput = inputDrink.value.split(' ')
