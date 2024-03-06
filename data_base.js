@@ -1,24 +1,26 @@
 const employeesInfo = []
 
 class employees{
-    constructor(position, salary, years_experience, days, schedule){
+    constructor(position, salary, years_experience, days, schedule, image){
         this.position = position
         this.salary = salary
         this.years_experience = years_experience
         this.days = days
         this.schedule = schedule
+        this.image = image
     }
 }
 
-let bartender = new employees('Bartender', 20, 2, 'Thursday, Friday, Saturday, Sunday', '6:00 pm - 3:00 am')
-let backBartender = new employees('Barback', 15, 1, 'Monday, Tuesday, Wednesday', '2:00 pm - 11:00 pm')
-let waiter = new employees("Waiter 1", 14, 1, 'Week days and weekends', '6:00 pm - 12:00 am')
-let runner = new employees('Runner', 12, 0, 'Week days and weekends', '2:00 pm - 12:00 am')
-let hostess = new employees('Hostess', 10, 0, 'Week days and weekends', '2:00 pm - 11:00 pm')
-let chef = new employees("Chef", 25, 3, 'Week days and weekends', '11:00 am - 10:00 pm')
-let backChef = new employees('Back chef', 18, 1, 'Week days and weekends', '11:00 am - 10:00 pm')
+let bartender = new employees('Bartender', 20, 2, 'Thursday, Friday, Saturday, Sunday', '6:00 pm - 3:00 am', './images/Bartender_job.jpeg')
+let backBartender = new employees('Barback', 15, 1, 'Monday, Tuesday, Wednesday', '2:00 pm - 11:00 pm', './images/Barback_job.webp')
+let waiter = new employees("Waiter", 14, 1, 'week days and weekends', '6:00 pm - 12:00 am', './images/waiter_job.jpeg')
+let runner = new employees('Runner', 12, 0, 'week days and weekends', '2:00 pm - 12:00 am', './images/runner_job.webp')
+let hostess = new employees('Hostess', 10, 0, 'week days and weekends', '2:00 pm - 11:00 pm', './images/Hostess_job.jpeg')
+let chef = new employees("Chef", 25, 3, 'week days and weekends', '11:00 am - 10:00 pm', '/images/Chef_job.jpeg')
+let backChef = new employees('Chef Assistant', 18, 1, 'week days and weekends', '11:00 am - 10:00 pm', './images/Assistan_job.jpeg')
+let dishWasher = new employees('Dishwasher', 12, 0, 'week days', '12:00 pm - 10:00 pm', './images/Dishwasher_job.jpeg')
 
-employeesInfo.push(bartender, backBartender, waiter, runner, hostess, chef, backChef)
+employeesInfo.push(bartender, backBartender, waiter, runner, hostess, chef, backChef, dishWasher)
 
 const drinksDataBase = []
 

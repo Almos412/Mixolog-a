@@ -61,19 +61,6 @@ buttonAverageAllDrinksPerYear.addEventListener('click', getAverageAllDrinksPerYe
 buttonAverageAllDrinksPerSeason.addEventListener('click', getAverageAllDrinksPerSeason)
 buttonAverage4Seasons.addEventListener('click', getAveragePerSeason2)
 
-function iniciarPagina2(){
-    sectionIntroduccion.style.display = "flex"
-    sectionGuia.style.display = "none"
-    sectionInformacionBebidas.style.display = "none"
-    sectionJuego.style.display="none"
-    sectionJuego2.style.display="none"
-    sectionMedidas.style.display="none"
-    sectionEmployees.style.display='none'
-    sectionDrinksInfo.style.display='none'
-    resultsAll.innerHTML = ''
-    resultsDiv.innerHTML = ''
-}
-
 function findDrink(){
     const nameInput = inputDrink.value.split(' ')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
@@ -339,4 +326,72 @@ function getAveragePerSeason2(){
         `
         resultsAll.innerHTML += dataPrinted
     });
+}
+
+//-----------------------------------------------EMPLOYEES SECTION-----------------------------------------------------------------------------
+//INPUTS AND DIV DISPLAY INFO
+const inputJob = document.getElementById('data-job')
+const divInfoJob = document.getElementById('job_info_displayed')
+
+//BUTTON
+const buttonJob = document.getElementById('job_display')
+const buttonData = document.getElementById('linkDataInfo')
+const mainPage2 = document.getElementById('link_Main_Page2')
+
+let dataPrint 
+
+buttonData.addEventListener('click', getDataBase)
+mainPage2.addEventListener('click', iniciarPagina2)
+buttonJob.addEventListener('click', printJobInfo)
+
+function iniciarPagina2(){
+    sectionIntroduccion.style.display = "flex"
+    sectionGuia.style.display = "none"
+    sectionInformacionBebidas.style.display = "none"
+    sectionJuego.style.display="none"
+    sectionJuego2.style.display="none"
+    sectionMedidas.style.display="none"
+    sectionEmployees.style.display='none'
+    sectionDrinksInfo.style.display='none'
+    resultsAll.innerHTML = ''
+    resultsDiv.innerHTML = ''
+    divInfoJob.innerHTML = ''
+}
+
+function getDataBase(){
+    sectionEmployees.style.display = 'none'
+    sectionDrinksInfo.style.display = 'flex'
+    divInfoJob.innerHTML = ''
+    resultsAll.innerHTML = ''
+    resultsDiv.innerHTML = ''
+}
+
+function printHTML(object){
+        dataPrint = `
+        <div id='job_1'>
+        <p>We are looking for a <span>${object.position}</span> whit at least <span>${object.years_experience}</span> years of experience that can work ${object.days} from ${object.schedule}. We are paying <span>$${object.salary}</span> usd per hour plus tips.</p>
+        <img src=${object.image} id="${object.name}_id" alt='${object.name}_alt'>
+        </div>   `
+        divInfoJob.innerHTML = dataPrint
+}
+function findJob(){
+    const jobInput = inputJob.value.split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ')
+    return employeesInfo.find(job => job.position == jobInput)
+}
+
+function printJobInfo(){
+divInfoJob.innerHTML = ''
+let jobObject = findJob()
+if(jobObject){
+printHTML(jobObject)
+}else{
+    dataPrint = `
+    <div id='job_1'>
+    <p>We don't offer a job for the one you typed in our page, we're sorry.</p>
+    </div>
+    `
+    divInfoJob.innerHTML = dataPrint
+}
 }
