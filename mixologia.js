@@ -322,7 +322,7 @@ const volumenes =[
     {nombre:"2.5 oz", id:"label-21/2"},
     {nombre:"3 oz", id:"label-3"},
     {nombre:"2-3 dashes", id:"label-dashes"},
-    {nombre:"Al gusto", id:"label-algusto"}
+    {nombre:"To taste", id:"label-algusto"}
 ]
 
 const cantidades =[
@@ -333,7 +333,7 @@ const cantidades =[
     {nombre:"4", id:"label-4c"},
     {nombre:"5", id:"label-5c"},
     {nombre:"6-8", id:"label-6c"},
-    {nombre:"2 cucharadas", id:"label-2cucha"},
+    {nombre:"2 spoons", id:"label-2cucha"},
     {nombre:"1 g", id:"label-1g"},
     {nombre:"5 g", id:"label-5g"}
 ]
@@ -904,7 +904,7 @@ function mostrarInformacionLiquidos(listaIngredientes, onzas, contenedor){
         if(lista.liquido !== undefined){
         let listaDesplegada=`
         <div id="descripcion" class="descripcion2">
-        <p> Lleva ${lista.liquido} en una cantidad de: </p>
+        <p> It goes with ${lista.liquido} in a quantity of: </p>
         </div>
         `;
         onzas.forEach((volumen)=>{
@@ -929,7 +929,7 @@ function mostrarInformacionSolidos(listaIngredientes, cantidades, contenedor){
         if(lista.solido !== undefined){
         let listaDesplegada=`
         <div id="descripcion" class="descripcion2">
-        <p> Lleva ${lista.solido} en una cantidad de: </p>
+        <p> It goes whith ${lista.solido} in a quantity of: </p>
         </div>
         `;
         cantidades.forEach((cantidad)=>{
