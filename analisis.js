@@ -59,6 +59,7 @@ buttonSpecificDrinkAndSeason.addEventListener('click', getAveragePerSeason)
 buttonAverageAllDrinks.addEventListener('click', getAverageAllDrinks)
 buttonAverageAllDrinksPerYear.addEventListener('click', getAverageAllDrinksPerYear)
 buttonAverageAllDrinksPerSeason.addEventListener('click', getAverageAllDrinksPerSeason)
+buttonAverage4Seasons.addEventListener('click', getAveragePerSeason2)
 
 function iniciarPagina2(){
     sectionIntroduccion.style.display = "flex"
@@ -318,11 +319,24 @@ function getAveragePerSeason2(){
     let sumQuantity = 0 
     let infoSeason = {}
     let keys = Object.keys(seasonSummary)
-
+    let array1 = []
+    let array = []
+    resultsAll.innerHTML = ' '
+    resultsDiv.innerHTML = ' '
     keys.forEach(season =>{
         sumQuantity = seasonSummary[season].reduce((acc, current) => acc + current, 0)
         const average = Math.round(sumQuantity/seasonSummary[season].length)
         infoSeason[season] = average
     })
-    return infoSeason
+    array1 = Object.entries(infoSeason)
+    array = sortListAscendingBidimensional(array1, 1)
+    console.log(array, array1)
+    array.forEach((season, index) => {
+        dataPrinted=`
+        <div id='result2'>
+            <p class='average_all'>${index + 1}- The average of drinks sold in the season of <span>${season[0]}</span> the past two years is <span>${season[1]}</span>.<p>
+        </div>    
+        `
+        resultsAll.innerHTML += dataPrinted
+    });
 }
