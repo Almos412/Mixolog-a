@@ -100,6 +100,10 @@
         <img src="./images/Mezcal.avif" alt="mezcal" class="drink-mezcal">
         <img src="./images/whisky-sour-3.webp" alt="whisky-sour-3" class="drink-whisky">
     </div>
+    <div id="employees-info">
+        <a id="employee_info">Employees information</a>
+        <a id="drinks-info">Drinks data analysis</a>
+    </div>
 </div>
 </section>
                                                                             <!--Sección guía de bebidas-->
@@ -413,6 +417,156 @@
         <button id="botonRegreso5" class="boton2">CHOOSE ANOTHER DRINK</button>
     </div>
     </section>
+                        <!-- EMPLOYEES SECTION -->
+    <section id="Employees_Info">
+        <nav>
+            <div class="navbar-left-2">
+                <div class="logos2">
+                    <p class="navTitle">Ace Lounge Drinks</p>
+                    <img src="./Logos/Ace.png" alt="Ace" class="logo-1">
+                    <img src="./Logos/Shakers.png" alt="Shakers" class="logo-2">
+                </div>
+        
+                <ul class="links-introduction2">
+                    <li>
+                        <a href="#" id="linkSells">Sales</a>
+                    </li>
+                    <li>
+                        <a href="#" id="linkDataInfo">Data</a>
+                    </li>
+                    <li>
+                        <a href="/">Locations</a>
+                    </li>
+                    <li>
+                        <a href="#" id="link_Main_Page2">Main Page</a>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="navbar-right">
+                <ul>
+                    <li class="navbar-mail">aceloungedrinks@gmail.com</li>
+                    <li class="navbar-logos">
+                        <a href="/">
+                        <img src="./Logos/instagram.png" alt="IG" class="logo-Ig">
+                        </a>
+                        <a href="/">
+                            <img src="./Logos/Facebook.png" alt="FB" class="logo-Fb3">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="data-text">
+            <h1 class="data-tittle">Jobs Info Ace Lounge Drinks</h1>
+            <p class="data-explain">IN THIS SECTION, YOU'LL FIND THE INFORMATION ABOUT OUR JOBS AND WHAT WE ASK SO YOU CAN BE PART OF OUR FAMILY IN ACE LOUNGE DRINKS. YOU'LL ONLY NEED TO TYPE THE NAME OF THE POSITION YOU ARE SEARCHING AND THE INFORMATION WILL BE DISPLAYED BELOW.</p>
+        </div> 
+        
+        <div class="data-inputs2">
+            <h2>INFORMATION NEEDED</h2>
+            <ul>
+                <li>
+                 <label for="data-job">Type the <span class="last-word">job</span> you are searching for:</label>
+                 <input type="text" id="data-job" placeholder="Bartender">   
+                </li>
+                <button id="job_display">DISPLAY INFORMATION</button>
+                <li>
+
+                </li>
+            </ul>
+        </div>
+        
+        <h2 id="tittle_results">JOB'S INFO</h2>
+
+        <div id="job_info_displayed"> 
+        </div>
+        
+    </section>
+                        <!-- DATA BASE SECTION -->
+    <section id="Drinks_Data" class="Drinks-Data2">
+        <nav>
+            <div class="navbar-left-2">
+                <div class="logos2">
+                    <p class="navTitle">Ace Lounge Drinks</p>
+                    <img src="./Logos/Ace.png" alt="Ace" class="logo-1">
+                    <img src="./Logos/Shakers.png" alt="Shakers" class="logo-2">
+                </div>
+        
+                <ul class="links-introduction2">
+                    <li>
+                        <a href="#" id="linkSells">Sales</a>
+                    </li>
+                    <li>
+                        <a href="#" id="linkDataInfo">Data</a>
+                    </li>
+                    <li>
+                        <a href="/">Locations</a>
+                    </li>
+                    <li>
+                        <a href="#" id="link_Main_Page">Main Page</a>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="navbar-right">
+                <ul>
+                    <li class="navbar-mail">aceloungedrinks@gmail.com</li>
+                    <li class="navbar-logos">
+                        <a href="/">
+                        <img src="./Logos/instagram.png" alt="IG" class="logo-Ig">
+                        </a>
+                        <a href="/">
+                            <img src="./Logos/Facebook.png" alt="FB" class="logo-Fb2">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="data-text">
+            <h1 class="data-tittle">Data Base Ace Lounge Drinks</h1>
+            <p class="data-explain">IN THIS SECTION, YOU'LL FIND INFORMATION ON THE SALES OF THE PAST 2 YEARS. THE INFORMATION IS ORGANIZED BASED ON THE DRINK'S NAME, YEAR AND SEASON. YOU'LL BE ABLE TO CHOOSE THE WAY YOU WANT TO SEE THE INFORMATION BASED ON WHAT YOU ARE SEARCHING.</p>
+        </div>    
+
+        <div class="data-inputs">
+            <h2>INFORMATION NEEDED</h2>
+            <ul>
+                <li>
+                 <label for="data-drink">Type the <span class="last-word">name</span> of the drink</label>
+                 <input type="text" id="data-drink" placeholder="Carajillo">   
+                </li>
+
+                <li>
+                    <label for="data-year">Type the <span class="last-word">year</span> of your interest</label>
+                    <input type="number" id="data-year" placeholder="2023">
+                </li>
+
+                <li>
+                    <label for="data-season">Type the <span class="last-word">season</span> of the year</label>
+                    <input type="text" id="data-season" placeholder="Spring">
+                </li>
+            </ul>
+
+            <div id="data-buttons">
+                <button id="individual_average_drink">AVERAGE FOR SPECIFIC DRINK</button>
+                <button id="individual_average_drink_year">AVERAGE FOR SPECIFIC DRINK AND YEAR</button>
+                <button id="individual_average_drink_season">AVERAGE FOR SPECIFIC DRINK AND SEASON</button>
+                <button id="whole_average_drinks">AVERAGE OF ALL DRINKS</button>
+                <button id="whole_average_drinks_year">AVERAGE OF ALL DRINKS PER YEAR</button>
+                <button id="whole_average_drinks_season">AVERAGE OF ALL DRINKS PER SEASON</button>
+                <button id="whole_average_seasons">AVERAGE OF THE 4 SEASONS</button>
+            </div>
+        </div>
+
+        <h2 id="tittle_results">RESULTS</h2>
+        <div id="results">
+        </div> 
+        <div id="results_All">
+        </div>
+    </section>
     <script src="./mixologia.js"></script>
+    <script src="./data_base.js"></script>
+    <script src="./analisis.js"></script>
 </body>
 </html>

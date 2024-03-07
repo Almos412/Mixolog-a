@@ -232,7 +232,32 @@ nav{
 .drink-mezcal{
     margin: 0px 50px;
 }
-
+.drinks-pictures #employees-info{
+    display: flex;
+    margin-top: 20px;
+}
+#employees-info a:nth-child(1){
+    color: var(--very-light-pink);
+    border: 1px solid var(--very-light-pink);
+    padding: 4px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#employees-info a:nth-child(2){
+    color: var(--very-light-pink);
+    border: 1px solid var(--very-light-pink);
+    padding: 4px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#employees-info a:hover{
+    color: var(--brown);
+    border: 1px solid var(--brown);
+}
 /* SECTION DRINKS MENU */
 #guia{
     display: flex;
@@ -274,6 +299,11 @@ nav{
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
+.tarjetasBebidas #parrafos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .tarjetasBebidas p{
     color: var(--dark-2);
     font-family: "Ropa Sans";
@@ -285,6 +315,10 @@ nav{
     border-radius: 8px;
     padding: 5px;
 }
+.tarjetasBebidas p:nth-child(2){
+    margin-top: -2px;
+}
+
 .tarjetasBebidas img{
 height: 80px;
 width: 80px;
@@ -737,4 +771,386 @@ color: var(--very-light-pink);
     border-left: 1px solid var(--very-light-pink);
     border-right: 1px solid var(--very-light-pink);
     border-radius: 4px;
+}
+
+/* EMPLOYEES SECTION-NAV BAR */
+#Employees_Info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#Employees_Info nav{
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--very-light-pink);
+    margin-top: -17px;
+}
+.logo-Fb3{
+    height: 33px;
+    width: 33px;
+    position: absolute;
+    right: 22px;
+    top: 10px;
+}
+#job_display{
+    height: 50px;
+    width: 380px;
+    font-size: var(--md);
+    font-weight: 500;
+    color: var(--text-input-field);
+    border: 1px solid var(--very-light-pink);
+    border-radius: 8px;
+    background-color: var(--very-light-pink);
+    color: var(--text-input-field);    
+    cursor: pointer;
+    margin: 10px 20px;
+ }
+ #job_display:hover{
+    border: 1px solid var(--brown);
+    background-color: transparent;
+    color: var(--brown);
+ }
+ .data-inputs2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.data-inputs2 h2{
+    color: var(--very-light-pink);
+    font-size: var(--lg);
+    font-weight: 100;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.data-inputs2 ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.data-inputs2 ul li{
+   text-decoration: none;
+   list-style-type: none;
+   margin-right: 15px;
+}
+.data-inputs2 ul li label{
+    color: var(--very-light-pink);
+    font-size: var(--lg);
+    margin-right: 3px;
+}
+.data-inputs2 ul li span{
+    color: var(--brown);
+    font-weight: 200;
+    font-size: var(--lg);
+}
+.data-inputs2 ul li input{
+    border: 1px solid var(--very-light-pink);
+    border-radius: 8px;
+    background-color: var(--background-2);
+    color: var(--brown);
+    text-align: center;
+    font-weight: 100;
+    font-size: var(--lg);
+    padding: 4px;
+}
+.data-inputs2 ul li input::placeholder{
+    color: var(--very-light-pink);
+    text-align: center;
+    font-size: var(--lg);
+    font-weight: 100;
+}
+/* JOB SECTION DISPLAY OF INFORMATION */
+#job_info_displayed{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#job_info_displayed div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#job_info_displayed p{
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    font-weight: 300;
+    margin-right: 10px;
+    text-align: center;
+    width: 78%;
+}
+#job_info_displayed span{
+    color: var(--brown);
+    font-weight: 500;
+}
+#job_info_displayed img{
+    height: 240px;
+    width: 240px;
+    border-radius: 24px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+#job_info_displayed img:hover{
+    transform: scale(1.1);
+}
+
+/* NAV BAR PAGINA DE DATA ANALYSIS  */
+.Drinks-Data2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#Drinks-Data nav{
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--very-light-pink);
+    margin-top: -17px;
+}
+.navbar-left-2{
+    display: flex;
+}
+.logos2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logos2 p{
+    font-family:"Ropa Sans";
+    font-size: var(--xlg);
+    margin-right: 2px;
+    font-weight: 600;
+    color: var(--brown);
+}
+.logo-1{
+    height: 40px;
+    width: 40px;
+    position: relative;
+}
+.logo-2{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 236px;
+    top: 23px;
+}
+.links-introduction2{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.links-introduction2 li a{
+    text-decoration: none;
+    color: var(--very-light-pink);
+    border: 1px solid var(--text-input-field);
+    border-radius: 4px;
+    font-size: var(--lg);
+}
+.links-introduction2 li a:hover{
+    color: var(--brown);
+    border:1px solid var(--brown);
+}
+.links-introduction2 li a:nth-child(1){
+    text-decoration: none;
+    margin-right: 8px;
+    padding: 1.5px;
+}
+.logo-Ig{
+    height: 25px;
+    width: 25px;
+    position: relative;
+}
+.logo-Fb2{
+    height: 33px;
+    width: 33px;
+    position: absolute;
+    right: 14px;
+    top: 10px;
+}
+.navbar-right-2{
+    display: flex;
+}
+.navbar-right-2 ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-right-2 ul li:nth-child(1){
+    font-size: var(--md);
+    color: var(--very-light-pink);
+    margin-right: 8px;
+}
+@media (min-width:1513px){
+    .logo-2{
+        left: 247px;
+    }
+}
+.data-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.data-tittle{
+    color: var(--very-light-pink);
+    font-size: var(--xlg);
+    font-family: "Ropa Sans";
+    border-bottom: 1px solid var(--text-input-field);
+    font-weight: 900;
+}
+.data-text p{
+    font-family: 'Ropa Sans';
+    text-align: center;
+    color: var(--very-light-pink);
+    font-size: var(--lg);
+    font-weight: 300;
+    width: 80%;
+}
+
+.data-inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+.data-inputs h2{
+    color: var(--very-light-pink);
+    font-size: var(--lg);
+    font-weight: 100;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.data-inputs ul{
+    display: flex;
+    flex-direction: row;
+}
+.data-inputs ul li{
+   text-decoration: none;
+   list-style-type: none;
+   margin-right: 15px;
+}
+.data-inputs ul li label{
+    color: var(--very-light-pink);
+    font-size: var(--lg);
+    margin-right: 3px;
+}
+.data-inputs ul li span{
+    color: var(--brown);
+    font-weight: 200;
+    font-size: var(--lg);
+}
+.data-inputs ul li input{
+    border: 1px solid var(--very-light-pink);
+    border-radius: 8px;
+    background-color: var(--background-2);
+    color: var(--brown);
+    text-align: center;
+    font-weight: 100;
+    font-size: var(--lg);
+    padding: 4px;
+}
+.data-inputs ul li input::placeholder{
+    color: var(--very-light-pink);
+    text-align: center;
+    font-size: var(--lg);
+    font-weight: 100;
+}
+
+#data-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--very-light-pink);
+    width: 90%;
+}
+
+#data-buttons button{
+    height: 50px;
+    width: 380px;
+    font-size: var(--md);
+    font-weight: 500;
+    color: var(--text-input-field);
+    border: 1px solid var(--very-light-pink);
+    border-radius: 8px;
+    background-color: var(--very-light-pink);
+    color: var(--text-input-field);    
+    cursor: pointer;
+    margin: 10px 20px;
+}
+#data-buttons button:hover{
+    border: 1px solid var(--brown);
+    background-color: transparent;
+    color: var(--brown);
+}
+/* AVERAGE FOR SPECIFIC DRINK, DRINK & YEAR, DRINK & SEASON */
+
+#tittle_results{
+    color: var(--very-light-pink);
+    font-size: var(--lg);
+    font-weight: 100;
+    border-bottom: 1px solid var(--very-light-pink);
+    text-align: center;
+    margin-top: 40px;
+}
+#results{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#result2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#results p{
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    font-weight: 300;
+    margin-right: 10px;
+}
+#results span{
+    color: var(--brown);
+    font-weight: 500;
+}
+#results img{
+    height: 80px;
+    width: 80px;
+    border-radius: 8px;
+}
+
+/* AVERAGE ALL DRINKS */
+#results_All{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    grid-row-gap: 2px;
+}
+#results_All div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#results_All p{
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    font-weight: 300;
+    margin-right: 10px;
+}
+#results_All span{
+    color: var(--brown);
+    font-weight: 500;
+}
+#results_All img{
+    height: 80px;
+    width: 80px;
+    border-radius: 8px;
 }
