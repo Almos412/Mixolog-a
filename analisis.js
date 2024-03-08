@@ -12,8 +12,9 @@ const buttonAverageAllDrinksPerYear = document.getElementById('whole_average_dri
 const buttonAverageAllDrinksPerSeason = document.getElementById('whole_average_drinks_season')
 const buttonAverage4Seasons = document.getElementById('whole_average_seasons')
 
-//LINK BACK TO MAIN PAGE
+//LINK BACK TO MAIN PAGE AND JOBS
 const mainPage = document.getElementById('link_Main_Page')
+const jobsInfo = document.getElementById('linkJobsInfo')
 
 // RESULTS DIV
 const resultsDiv = document.getElementById('results')
@@ -53,6 +54,7 @@ for (let i = 0; i < drinksDataBase.length; i++) {
 console.log(seasonSummary)
 
 mainPage.addEventListener('click', iniciarPagina2)
+jobsInfo.addEventListener('click', getJobsInfo)
 buttonSpecificDrink.addEventListener('click', getAveragePerDrink)
 buttonSpecificDrinkAndYear.addEventListener('click', getAveragePerYear)
 buttonSpecificDrinkAndSeason.addEventListener('click', getAveragePerSeason)
@@ -60,6 +62,18 @@ buttonAverageAllDrinks.addEventListener('click', getAverageAllDrinks)
 buttonAverageAllDrinksPerYear.addEventListener('click', getAverageAllDrinksPerYear)
 buttonAverageAllDrinksPerSeason.addEventListener('click', getAverageAllDrinksPerSeason)
 buttonAverage4Seasons.addEventListener('click', getAveragePerSeason2)
+
+function getJobsInfo(){
+    sectionEmployees.style.display = 'flex'
+    sectionDrinksInfo.style.display = 'none'
+    divInfoJob.innerHTML = ''
+    resultsAll.innerHTML = ''
+    resultsDiv.innerHTML = ''
+    inputDrink.value = ''
+    inputJob.value = ''
+    inputSeason.value = ''
+    inputYear.value = ''
+}
 
 function findDrink(){
     const nameInput = inputDrink.value.split(' ')
@@ -356,6 +370,10 @@ function iniciarPagina2(){
     resultsAll.innerHTML = ''
     resultsDiv.innerHTML = ''
     divInfoJob.innerHTML = ''
+    inputDrink.value = ''
+    inputJob.value = ''
+    inputSeason.value = ''
+    inputYear.value = ''
 }
 
 function getDataBase(){
@@ -364,6 +382,10 @@ function getDataBase(){
     divInfoJob.innerHTML = ''
     resultsAll.innerHTML = ''
     resultsDiv.innerHTML = ''
+    inputDrink.value = ''
+    inputJob.value = ''
+    inputSeason.value = ''
+    inputYear.value = ''
 }
 
 function printHTML(object){

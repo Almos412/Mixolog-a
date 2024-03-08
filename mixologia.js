@@ -7,6 +7,7 @@ const botonJuego = document.getElementById("linkGame")
 const sectionGuia = document.getElementById ("guia")
 const botonSeleccionar = document.getElementById("botonSeleccionar")
 const botonRegreso = document.getElementById("botonRegreso")
+const backToTest = document.getElementById('linkGame2')
 //Sección Información
 const sectionInformacionBebidas = document.getElementById("informacionBebidas")
 const sectionSeleccion = document.getElementById("bebidaSe")
@@ -17,6 +18,7 @@ const sectionTituloSe = document.getElementById("tituloSe")
 const sectionAñoSe = document.getElementById("añoSe")
 //Sección Juego
 const sectionJuego = document.getElementById("juego")
+const backToMenu = document.getElementById('linkMenu')
 const contenedorBebidas2 = document.getElementById ("contenedorBebidas2")
 const botonRegreso3 = document.getElementById("botonRegreso3")
 const botonJuego2 = document.getElementById("botonJuego2")
@@ -404,6 +406,8 @@ botonInformacion.addEventListener("click", iniciarGuia)
 botonRegreso.addEventListener("click", iniciarPagina)
 botonRegreso2.addEventListener("click", regresarGuia)
 botonJuego.addEventListener("click", iniciarJuego)
+backToTest.addEventListener("click", iniciarJuego)
+backToMenu.addEventListener('click', iniciarGuia)
 botonRegreso3.addEventListener("click", iniciarPagina)
 botonRegreso4.addEventListener("click", regresarAlJuego)
 botonJuego4.addEventListener("click", juegoMedidas)
@@ -414,6 +418,7 @@ sectionEmployeesLink.addEventListener('click', getIntoEmployeesInfo)
 function iniciarGuia(){
     sectionIntroduccion.style.display = "none"
     sectionGuia.style.display ="flex"
+    sectionJuego.style.display = 'none'
 
     iniciarInputs(contenedorBebidas, tragos, "tarjetasBebidas")
    
@@ -439,6 +444,7 @@ function iniciarGuia(){
 function iniciarJuego(){
     sectionIntroduccion.style.display = "none"
     sectionJuego.style.display ="flex"
+    sectionGuia.style.display = 'none'
 
     iniciarInputs2(contenedorBebidas2, tragos, "tarjetasBebidas2")
 
